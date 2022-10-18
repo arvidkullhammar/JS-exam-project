@@ -17,12 +17,14 @@ export default async function handler(req, res) {
 
   const players = await prisma.players.findMany({
     where: {
-      TeamId: parseInt(req.query.id)
+      teamId: parseInt(req.query.id)
     }
   })
  
   if (players.length !== 0 ) {
-    res.status(200).json(players);
+    res.status(200).json(players.sort((a, b) => {
+      return a.id - b.id;
+    }));
   } else {
     res.status(404).json("No players found");
   }

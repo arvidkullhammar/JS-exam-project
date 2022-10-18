@@ -10,7 +10,7 @@ export default async function handler(req, res) {
       id: parseInt(req.query.id),
     },
   });
-  console.log("rooster", team);
+  console.log("roster", team);
 
   if (team !== null) {
     res.status(200).json(team);

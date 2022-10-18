@@ -1,8 +1,8 @@
-const category = ['spelschema', 'tabell', 'poangliga', 'spelschema', 'laginfo', 'info']
+const category = [] //hämta laginfo från databasen
 
 const Comp = (props) => {
   console.warn(props)
-  return <div>Kategori: {props.id}</div>
+  return <div>Lag: {props.id}</div>
 }
 
 export async function getServerSideProps(context) {

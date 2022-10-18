@@ -1,9 +1,17 @@
+:root {
+  --primary: #1c0c58;
+  --secondary: #3c2c8d;
+  --success: #916bbf;
+  --link-hover: rgba(145, 107, 191, 0.3);
+  --button-hover: rgba(145, 107, 191, 0.8);
+  --nav-gradient: linear-gradient(90deg, #3d2c8d 0%, #1c0c58 100%);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {

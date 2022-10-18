@@ -1,9 +1,15 @@
-import React from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
-function backButton() {
+const backButton = () => {
   const router = useRouter()
-
-  return <span onClick={() => router.back()}>Click here to go back</span>
+  return (
+    <header>
+      <button onClick={() => router.back()}>Back</button>
+      <nav>
+        <Link href="/">Home</Link>
+      </nav>
+    </header>
+  )
 }
 export default backButton

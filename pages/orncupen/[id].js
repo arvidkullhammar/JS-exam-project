@@ -1,4 +1,4 @@
-const category = ['spelschema', 'tabell', 'poangliga', 'spelschema', 'laginfo', 'info']
+const category = ['orncupen', 'spelschema', 'tabell', 'poangliga', 'spelschema', 'laginfo', 'info']
 
 const Comp = (props) => {
   console.warn(props)

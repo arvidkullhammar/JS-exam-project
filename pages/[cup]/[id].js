@@ -1,9 +1,14 @@
-const category = ['spelschema', 'tabell', 'poangliga', 'spelschema', 'laginfo', 'info']
-
+const category = ['spelschema', 'tabell', 'poangliga', 'spelschema', 'info']
+import BackButton from '../../components/BackButton/BackButton'
 
 const Comp = (props) => {
   console.warn(props)
-  return <div>Kategori: {props.id}</div>
+  return (
+    <div>
+      Kategori: {props.id}
+      <BackButton />
+    </div>
+  )
 }
 
 export async function getServerSideProps(context) {

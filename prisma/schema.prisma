@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,17 +11,15 @@ model Teams {
   id      Int       @id @default(autoincrement())
   email   String    @unique
   name    String
-  Abr     String
-  Admin   String
+  abr     String
+  admin   String
   Rooster Players[]
 }
 
 model Players {
   id     Int    @id @default(autoincrement())
-  Name   String
+  name   String
   number Int
-  TeamId Int
-  Team   Teams  @relation(fields: [TeamId], references: [id])
+  teamId Int
+  team   Teams  @relation(fields: [teamId], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
-
-

@@ -1,5 +1,6 @@
 const category = ['spelschema', 'tabell', 'poangliga', 'spelschema', 'laginfo', 'info']
 
+
 const Comp = (props) => {
   console.warn(props)
   return <div>Kategori: {props.id}</div>

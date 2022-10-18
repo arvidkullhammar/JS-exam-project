@@ -23,3 +23,10 @@ export async function getServerSideProps(context) {
 }
 
 export default Comp
+
+// grassroot.se / [cupnamn] / spelschema
+// grassroot.se / [cupnamn] / tabell
+// grassroot.se / [cupnamn] / poängliga
+// grassroot.se / [cupnamn] / [matchinfo]
+// grassroot.se / [cupnamn] / [laginfo]
+// grassroot.se / [cupnamn] / info

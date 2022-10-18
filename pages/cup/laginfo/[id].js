@@ -1,24 +1,25 @@
-const category = ['spelschema', 'tabell', 'poangliga', 'spelschema', 'laginfo', 'info']
+const category = ["spelschema", "tabell", "poangliga", "spelschema", "laginfo", "info"];
+import LagInfoHeader from "../../../components/backButton/LagInfoComponents/LagInfoHeader";
 
 const Comp = (props) => {
-  console.warn(props)
-  return <div>Kategori: {props.id}</div>
-}
+  console.warn(props);
+  return <div>Kategori: {props.id}</div>;
+};
 
 export async function getServerSideProps(context) {
-  const id = context.query.id
+  const id = context.query.id;
   if (category.includes(id)) {
     return {
       props: { id },
-    }
+    };
   } else {
     return {
       redirect: {
-        destination: '/',
+        destination: "/",
         permanent: false,
       },
-    }
+    };
   }
 }
 
-export default Comp
+export default Comp;

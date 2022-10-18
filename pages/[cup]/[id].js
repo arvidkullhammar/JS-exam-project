@@ -1,4 +1,4 @@
-const category = ['orncupen', 'spelschema', 'tabell', 'poangliga', 'spelschema', 'laginfo', 'info']
+const category = ['spelschema', 'tabell', 'poangliga', 'spelschema', 'laginfo', 'info']
 
 const Comp = (props) => {
   console.warn(props)
@@ -22,3 +22,10 @@ export async function getServerSideProps(context) {
 }
 
 export default Comp
+
+// grassroot.se / [cupnamn] / spelschema
+// grassroot.se / [cupnamn] / tabell
+// grassroot.se / [cupnamn] / poängliga
+// grassroot.se / [cupnamn] / [matchinfo]
+// grassroot.se / [cupnamn] / [laginfo]
+// grassroot.se / [cupnamn] / info

@@ -1,4 +1,35 @@
-img {
-  width: 100%;
-  height: 100%;
+.lagInfoContainer {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-rows: repeat(8, 1fr);
+
+  grid-column-gap: 16px;
+
+  grid-row-gap: 16px;
+}
+
+.headerLogo {
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.spelarTrupp {
+  grid-area: 3 / 2 / 7 / 3;
+}
+
+.kontaktInfo {
+  grid-area: 3 / 1 / 5 / 2;
+}
+
+.omkladningsRum {
+  grid-area: 5 / 1 / 7 / 2;
+}
+
+.hittaHit {
+  grid-area: 7 / 1 / 9 / 2;
+}
+
+.viktigInfo {
+  grid-area: 7 / 2 / 9 / 3;
 }

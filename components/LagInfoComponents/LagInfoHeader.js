@@ -1,12 +1,15 @@
 import React from "react";
+import Image from 'next/image'
+import classes from "../../styles/LagInfo.module.css"
+import KontaktInfo from "./KontaktInfo";
 
 
-import { useRouter } from "next/router";
 
-export default function LagInfoHeader() {
+
+export default function LagInfoHeader(props) {
   return (
-    <header>
-      <img className="" src="../../Images/leksandhockeyheader.png" alt="" />
-    </header>
+    <>
+    </>
+  
   );
 }

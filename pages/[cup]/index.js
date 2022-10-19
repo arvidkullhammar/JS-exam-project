@@ -12,10 +12,10 @@ const Comp = (props) => {
 }
 
 export async function getServerSideProps(context) {
-  const id = context.query.id
-  if (category.includes(id)) {
+  const cup = context.query.cup
+  if (category.includes(cup)) {
     return {
-      props: { id },
+      props: { id: cup },
     }
   } else {
     return {

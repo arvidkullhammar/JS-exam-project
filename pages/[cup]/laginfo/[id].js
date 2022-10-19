@@ -6,11 +6,11 @@ export default function LagInfo(props) {
   return (
     <main className={classes.lagInfoContainer}>
       <header className={classes.headerLogo}></header>
-      <div className={classes.kontaktInfo}></div>
-      <div className={classes.spelarTrupp}></div>
-      <div className={classes.omkladningsRum}></div>
-      <div className={classes.hittaHit}></div>
-      <div className={classes.viktigInfo}></div>
+      <div className={classes.kontaktInfo}>Kontaktinfo</div>
+      <div className={classes.spelarTrupp}>Spelartrupp</div>
+      <div className={classes.omkladningsRum}>Omklädningsrum</div>
+      <div className={classes.hittaHit}>Hitta hit</div>
+      <div className={classes.viktigInfo}>viktig info</div>
     </main>
   );
 }

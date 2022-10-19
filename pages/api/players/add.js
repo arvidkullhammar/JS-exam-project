@@ -4,13 +4,18 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export default async function handler(req, res) {
-/*   const newPlayer = await prisma.players.create({
-    data: {
-      name: req.body.name,
-      number: req.body.number,
-      teamId: req.body.team,
-    },
-  }) */
+  console.log(req.method);
+  if (req.method !== "POST") {
+    res.status(405).json("Invalid request");
+  } else {
+    const newPlayer = await prisma.players.create({
+      data: {
+        name: req.body.name,
+        number: req.body.number,
+        teamId: req.body.team,
+      },
+    });
 
-  res.status(200).json('hi');
+    res.status(201).json("Player added!");
+  }
 }

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Datum from '../components/1.General/Datum/Datum'
 import Infoknapp from '../components/1.General/Infoknapp/Infoknapp'
+import Tabell from '../components/Tabell/Tabell'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <link rel="icon" href="/football.ico" />
       </Head>
       <Infoknapp />
+      <Tabell />
 
       <main className={styles.main}>
         <h1 className={styles.title}>to GrassRoot Inc.</h1>

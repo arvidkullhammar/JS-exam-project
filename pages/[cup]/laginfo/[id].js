@@ -1,9 +1,9 @@
 /** @format */
-
-import KontaktInfo from '../../../components/LagInfoComponents/KontaktInfo';
+import Image from 'next/future/image';
 import React from 'react';
 import classes from '../../../styles/LagInfo.module.css';
 import Klubbloggor from '../../../components/LagInfoComponents/Klubbloggor';
+import jersey from '../../../Images/lagtröja.png';
 
 export default function LagInfo(props) {
   return (
@@ -12,19 +12,29 @@ export default function LagInfo(props) {
         <Klubbloggor />
         <h1>{props.teamName}</h1>
       </header>
+
       <div className={classes.kontaktInfo}>
         <h2>Kontaktinfo</h2>
         <h2>{props.admin}</h2>
         <h2>{props.email}</h2>
       </div>
+
       <div className={classes.spelarTrupp}>
         <h2>Spelartrupp</h2>
         {props.players.map((player) => (
           <div key={player.id}>
             <h3>{player.name}</h3>
+            <Image
+              src={jersey}
+              alt="Picture of a jersey"
+              width="50px"
+              height="50px"
+              layout="responsive"
+            />
           </div>
         ))}
       </div>
+
       <div className={classes.omkladningsRum}>Omklädningsrum</div>
       <div className={classes.hittaHit}>Hitta hit</div>
       <div className={classes.viktigInfo}>viktig info</div>

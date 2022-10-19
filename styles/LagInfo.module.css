@@ -37,6 +37,11 @@
   overflow: auto;
 }
 
+.jersey {
+  max-height: 50px;
+  max-width: 50px;
+}
+
 .kontaktInfo {
   grid-area: 3 / 1 / 5 / 2;
   background-color: #fff;

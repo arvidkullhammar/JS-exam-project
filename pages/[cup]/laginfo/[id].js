@@ -6,7 +6,7 @@ export default function LagInfo(props) {
   return (
     <main className={classes.lagInfoContainer}>
       <header className={classes.headerLogo}></header>
-      <div className={classes.kontaktInfo}>Kontaktinfo</div>
+      <div className={classes.kontaktInfo}>{props.id}</div>
       <div className={classes.spelarTrupp}>Spelartrupp</div>
       <div className={classes.omkladningsRum}>Omklädningsrum</div>
       <div className={classes.hittaHit}>Hitta hit</div>
@@ -15,15 +15,15 @@ export default function LagInfo(props) {
   );
 }
 
-// export async function getServerSideProps(context) {
-//   const [teamName, setTeamName] = useState(false);
+export async function getServerSideProps(context) {
+  const [fetched, setFetched] = useState("");
 
-//   useEffect(() => {
-//     fetch("http://localhost:3000/api/teams")
-//       .then((rawData) => rawData.json())
-//       .then((data) => console.log(data))
-//       .catch((error) => console.log(error));
-//   }, []);
+  fetch("http://localhost:3000/api/teams")
+    .then((rawData) => rawData.json())
+    .then((data) => setFetched(data[0]))
+    .catch((error) => console.log(error));
 
-//   return <div>{teamName}</div>;
-// }
+  return {
+    props: { id: teamName, email, name, abr, admin },
+  };
+}

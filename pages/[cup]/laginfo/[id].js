@@ -5,12 +5,13 @@ import React, { useState, useEffect } from 'react';
 import classes from '../../../styles/LagInfo.module.css';
 
 export default function LagInfo(props) {
-  const [fetched, setFetched] = useState();
   return (
     <main className={classes.lagInfoContainer}>
-      <header className={classes.headerLogo}></header>
+      <header className={classes.headerLogo}>
+        <h1>{props.name}</h1>
+      </header>
       <div className={classes.kontaktInfo}>
-        <h1>Kontaktinfo</h1>
+        <h2>Kontaktinfo</h2>
         <h2>{props.admin}</h2>
         <h2>{props.email}</h2>
       </div>
@@ -27,6 +28,6 @@ export async function getServerSideProps({ params }) {
   const res = await raw.json();
 
   return {
-    props: { id: 'id', email: res.email, name: 'name', abr: 'abr', admin: res.admin },
+    props: { id: 'id', email: res.email, name: res.name, abr: 'abr', admin: res.admin },
   };
 }

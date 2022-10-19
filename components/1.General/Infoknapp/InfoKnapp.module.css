@@ -1,0 +1,14 @@
+.infoBtn {
+  height: 30px;
+  width: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 15px;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  transition: 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

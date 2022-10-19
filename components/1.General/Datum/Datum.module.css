@@ -1,0 +1,31 @@
+.circle {
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 20px;
+  /* text styling */
+  font-size: 45px;
+  width: 220px;
+  height: 220px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  font-family: Arial;
+  position: relative;
+  background: #5e2750;
+  background: linear-gradient(45deg, #5e2750, #b13e53);
+  box-shadow: 0px 0px 1px 1px #5e2750;
+}
+
+.textWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.textWrap span {
+  display: block;
+}
+.circle span:nth-child(2) {
+  color: red;
+  font-size: 22px;
+}

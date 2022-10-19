@@ -1,4 +1,4 @@
-const category = ['spelschema', 'tabell', 'poangliga', 'spelschema', 'info']
+const category = ['spelschema', 'tabell', 'poangliga', 'spelschema', 'cupinfo']
 import BackButton from '../../components/General/BackButton/backButton'
 
 const Comp = (props) => {

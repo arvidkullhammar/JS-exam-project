@@ -1,3 +1,5 @@
+/** @format */
+
 .lagInfoContainer {
   display: grid;
 
@@ -27,6 +29,7 @@
 .kontaktInfo {
   grid-area: 3 / 1 / 5 / 2;
   background-color: gray;
+  font-size: 8px;
 }
 
 .omkladningsRum {

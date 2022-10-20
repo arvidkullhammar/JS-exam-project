@@ -4,6 +4,7 @@ import React from 'react';
 import classes from '../../../styles/LagInfo.module.css';
 import Klubbloggor from '../../../components/LagInfoComponents/Klubbloggor';
 import jersey from '../../../Images/lagtröja.png';
+import Addplayer from '../../../components/Addplayer/Addplayer';
 
 export default function LagInfo(props) {
   return (
@@ -35,6 +36,7 @@ export default function LagInfo(props) {
           </div>
         ))}
       </div>
+      <Addplayer team={props.id} />
       <div className={classes.omkladningsRum}>Omklädningsrum</div>
       <div className={classes.hittaHit}>Hitta hit</div>
       <div className={classes.viktigInfo}>

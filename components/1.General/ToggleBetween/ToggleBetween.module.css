@@ -1,3 +1,5 @@
+/** @format */
+
 .rightRadius {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -40,5 +42,8 @@
 .container {
   display: flex;
   justify-content: center;
-  width: 60%;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }

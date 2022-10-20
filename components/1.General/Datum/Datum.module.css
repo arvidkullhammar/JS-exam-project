@@ -1,6 +1,10 @@
+/** @format */
+
 .circleContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  position: relative;
+  top: -30px;
 }
 
 .circle {
@@ -11,13 +15,11 @@
   font-size: 13px;
   width: 50px;
   height: 50px;
-  color: #fff;
+  color: black;
   border: 2px solid #fff;
   text-align: center;
-  font-family: Arial;
   position: relative;
-  background: #5e2750;
-  background: linear-gradient(45deg, #5e2750, #b13e53);
+  background: #fff;
   box-shadow: 0px 0px 1px 1px #5e2750;
 }
 

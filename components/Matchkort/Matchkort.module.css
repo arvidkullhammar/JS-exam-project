@@ -1,3 +1,5 @@
+/** @format */
+
 .container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -31,6 +33,7 @@
   text-align: center;
   position: relative;
   color: rgba(0, 0, 0, 0.2);
+  left: 87%;
 }
 
 .textWrap {

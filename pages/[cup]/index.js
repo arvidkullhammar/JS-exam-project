@@ -1,5 +1,5 @@
 const category = ['spelschema', 'tabell', 'poangliga', 'spelschema', 'cupinfo']
-import BackButton from '../../components/General/BackButton/backButton'
+import BackButton from '../../components/1.General/BackButton/backButton'
 
 const Comp = (props) => {
   console.warn(props)

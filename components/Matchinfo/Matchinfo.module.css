@@ -1,0 +1,25 @@
+.tabellStyling {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  color: #000000;
+  text-align: center;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+table.tabellStyling {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.tabellStyling td,
+table.tabellStyling th {
+  padding: 3px;
+}
+
+table.tabellStyling thead {
+  background-color: #ffcc00;
+}

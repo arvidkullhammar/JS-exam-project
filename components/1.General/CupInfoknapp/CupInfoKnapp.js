@@ -1,8 +1,8 @@
 import React from 'react'
-import classes from './Infoknapp.module.css'
+import classes from './CupInfoKnapp.module.css'
 import Link from 'next/link'
 
-function InfoKnapp() {
+function CupInfoKnapp() {
   return (
     <div className={classes.circle}>
       <Link
@@ -16,4 +16,4 @@ function InfoKnapp() {
     </div>
   )
 }
-export default InfoKnapp
+export default CupInfoKnapp

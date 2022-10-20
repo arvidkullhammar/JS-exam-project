@@ -7,7 +7,7 @@ function MatchinfoKnapp() {
     <div className={classes.circle}>
       <Link
         href={{
-          pathname: `/{cupnamn}/info`,
+          pathname: `/{cupnamn}/matchinfo/{abbv-abbv}`,
         }}
         className={classes.textWrap}
       >

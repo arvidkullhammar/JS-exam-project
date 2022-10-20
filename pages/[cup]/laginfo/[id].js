@@ -4,6 +4,7 @@ import React from 'react';
 import classes from '../../../styles/LagInfo.module.css';
 import Klubbloggor from '../../../components/LagInfoComponents/Klubbloggor';
 import jersey from '../../../Images/lagtröja.png';
+import Addplayer from '../../../components/Addplayer/Addplayer';
 
 export default function LagInfo(props) {
   return (
@@ -22,6 +23,7 @@ export default function LagInfo(props) {
         {props.players.map((player) => (
           <div key={player.id}>
             <p>{player.name}</p>
+            <p>{player.number}</p>
             <Image
               src={jersey}
               alt="Picture of a jersey"
@@ -32,6 +34,7 @@ export default function LagInfo(props) {
           </div>
         ))}
       </div>
+      <Addplayer />
       <div className={classes.omkladningsRum}>Omklädningsrum</div>
       <div className={classes.hittaHit}>Hitta hit</div>
       <div className={classes.viktigInfo}>

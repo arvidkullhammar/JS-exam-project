@@ -22,14 +22,16 @@ export default function LagInfo(props) {
         {props.players.map((player) => (
           <div key={player.id}>
             <p>{player.name}</p>
-            <p>{player.number}</p>
-            <Image
-              src={jersey}
-              alt="Picture of a jersey"
-              width="50px"
-              height="50px"
-              layout="responsive"
-            />
+            <div className={classes.jerseyContainer}>
+              <Image
+                src={jersey}
+                alt="Picture of a jersey"
+                width="50px"
+                height="50px"
+                className={classes.jersey}
+              />
+              <p className={classes.jerseyNumber}>{player.number}</p>
+            </div>
           </div>
         ))}
       </div>

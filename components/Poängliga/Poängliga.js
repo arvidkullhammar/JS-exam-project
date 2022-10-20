@@ -7,8 +7,8 @@ function Poängliga() {
       <table className={classes.tabellStyling}>
         <thead>
           <tr>
-            <th className={classes.textLeft}>Lag</th>
-            <th>Spelare</th>
+            <th className={classes.textLeft}>Spelare</th>
+            <th>Poäng</th>
           </tr>
         </thead>
         <tbody>

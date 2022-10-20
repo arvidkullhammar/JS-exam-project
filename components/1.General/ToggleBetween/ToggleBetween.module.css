@@ -1,17 +1,44 @@
 .rightRadius {
-  border: 1px outset black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
   color: black;
   background-color: white;
+  border-radius: 0px 6px 6px 0px;
+  width: 33.33%;
+  text-align: center;
+  padding: 4px;
 }
 
 .squared {
-  border: 1px outset black;
+  border-top: 1px outset black;
+  border-bottom: 1px outset black;
   color: black;
   background-color: white;
+  width: 33.33%;
+  text-align: center;
+  padding: 4px;
 }
 
 .leftRadius {
-  border: 1px outset black;
+  border-top: 1px outset black;
+  border-left: 1px outset black;
+  border-bottom: 1px outset black;
   color: black;
   background-color: white;
+  width: 33.33%;
+  border-radius: 6px 0px 0px 6px;
+  text-align: center;
+  padding: 4px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 60%;
 }

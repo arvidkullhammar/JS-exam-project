@@ -1,11 +1,14 @@
 import React from "react";
 import classes from "./Matchkort.module.css";
+import MatchinfoKnapp from "../../components/1.General/MatchinfoKnapp/MatchinfoKnapp";
 
 function Matchkort() {
   return (
     <div className={classes.container}>
       <div className={classes.div1}>Mån 13 nov, 10:00</div>
-      <div className={classes.div2}>Infoknapp</div>
+      <div className={classes.div2}>
+        <span className={classes.textWrap}>i</span>
+      </div>
       <div className={classes.div3}>Domsjö IF - Modo FF</div>
       <div className={classes.div4}>P15</div>
       <div className={classes.div5}>Matchen pågår</div>

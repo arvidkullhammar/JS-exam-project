@@ -5,6 +5,14 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   color: black;
+  grid-column-gap: 5px;
+  grid-row-gap: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  text-indent: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .div1 {
@@ -12,7 +20,34 @@
 }
 .div2 {
   grid-area: 1 / 4 / 3 / 7;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  /* text styling */
+  font-size: 13px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  color: rgba(0, 0, 0, 0.2);
 }
+
+.textWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-95%, -50%);
+  font-style: italic;
+}
+.textWrap span {
+  display: block;
+}
+.circle span:nth-child(2) {
+  color: red;
+  font-size: 22px;
+}
+
 .div3 {
   grid-area: 3 / 1 / 5 / 7;
 }
@@ -21,15 +56,16 @@
 }
 .div5 {
   grid-area: 5 / 4 / 7 / 7;
+  color: #348c31;
+  font-weight: bold;
 }
 .div6 {
   grid-area: 7 / 1 / 9 / 4;
-  color: #348c31;
-  font-weight: bold;
 }
 .div7 {
   grid-area: 7 / 4 / 9 / 7;
   color: white;
   background-color: black;
   border-radius: 6px;
+  text-align: center;
 }

@@ -12,35 +12,27 @@ export default function LagInfo(props) {
         <Klubbloggor />
         <h1>{props.teamName}</h1>
       </header>
-
       <div className={classes.kontaktInfo}>
         <h2>Kontaktinfo</h2>
         <p>{props.admin}</p>
         <p>{props.email}</p>
       </div>
-
       <div className={classes.spelarTrupp}>
         <h2>Spelartrupp</h2>
         {props.players.map((player) => (
           <div key={player.id}>
             <p>{player.name}</p>
-            <Image
-              src={jersey}
-              alt="Picture of a jersey"
-              width="50px"
-              height="50px"
-              layout="responsive"
-            />
+            <p>{player.number}</p>
           </div>
         ))}
       </div>
-
       <div className={classes.omkladningsRum}>Omklädningsrum</div>
       <div className={classes.hittaHit}>Hitta hit</div>
       <div className={classes.viktigInfo}>
         <h4>Viktig information</h4>
         <p>rea på kaffe. 5 kr st!</p>
       </div>
+      f
     </main>
   );
 }

@@ -27,6 +27,19 @@
   align-items: center;
 }
 
+.spelarTruppText {
+  position: fixed;
+  top: 17%;
+  width: 100%;
+  z-index: 100;
+}
+
+.nameJersey {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .spelarTrupp {
   grid-area: 3 / 2 / 7 / 3;
   background-color: #fff;

@@ -1,13 +1,12 @@
 /** @format */
-import Image from 'next/future/image';
-import React from 'react';
-import classes from '../../../styles/LagInfo.module.css';
-import Klubbloggor from '../../../components/LagInfoComponents/Klubbloggor';
-import jersey from '../../../Images/lagtröja.png';
-import Addplayer from '../../../components/Addplayer/Addplayer';
+import Image from "next/future/image";
+import React from "react";
+import classes from "../../../styles/LagInfo.module.css";
+import Klubbloggor from "../../../components/LagInfoComponents/Klubbloggor";
+import jersey from "../../../Images/lagtröja.png";
+import Addplayer from "../../../components/Addplayer/Addplayer";
 
 export default function LagInfo(props) {
-
   return (
     <main className={classes.lagInfoContainer}>
       <header className={classes.headerLogo}>
@@ -20,28 +19,24 @@ export default function LagInfo(props) {
         <p>{props.email}</p>
       </div>
       <div className={classes.spelarTrupp}>
-        <h2>Spelartrupp</h2>
-        {props.players.map((player) => (
-          <div key={player.id}>
-            <p>{player.name}</p>
-            <div className={classes.jerseyContainer}>
-              <Image
-                src={jersey}
-                alt="Picture of a jersey"
-                width="50px"
-                height="50px"
-                className={classes.jersey}
-              />
-              <p className={classes.jerseyNumber}>{player.number}</p>
+        <h2 className={classes.spelarTruppText}>Spelartrupp</h2>
+        <div>
+          {props.players.map((player) => (
+            <div key={player.id}>
+              <p>{player.name}</p>
+              <div className={classes.jerseyContainer}>
+                <Image src={jersey} alt="Picture of a jersey" width="50px" height="50px" className={classes.jersey} />
+                <p className={classes.jerseyNumber}>{player.number}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <Addplayer team={props.id} />
       <div className={classes.omkladningsRum}>Omklädningsrum</div>
       <div className={classes.hittaHit}>Hitta hit</div>
       <div className={classes.viktigInfo}>
-        <h4>Viktig information</h4>
+        Viktig information
         <p>rea på kaffe. 5 kr st!</p>
       </div>
       f

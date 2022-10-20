@@ -1,0 +1,15 @@
+.container {
+  color: black;
+}
+
+.matchInfo {
+  color: #348c31;
+  font-weight: bold;
+}
+
+.resultat {
+  color: white;
+  background-color: black;
+  border-radius: 6px;
+  text-align: center;
+}

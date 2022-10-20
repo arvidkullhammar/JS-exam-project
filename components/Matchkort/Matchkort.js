@@ -1,15 +1,16 @@
 import React from 'react'
+import classes from './Matchkort.module.css'
 
 function Matchkort() {
   return (
-    <div>
+    <div className={classes.container}>
       <div>Mån 13 nov, 10:00</div>
       <div>Infoknapp</div>
       <div>Domsjö IF - Modo FF</div>
       <div>P15</div>
       <div>Kempevallen</div>
-      <div>Matchen pågår</div>
-      <div>13- 37</div>
+      <div className={classes.matchInfo}>Matchen pågår</div>
+      <div className={classes.resultat}>13- 37</div>
     </div>
   )
 }

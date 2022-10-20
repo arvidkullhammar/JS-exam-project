@@ -7,6 +7,7 @@ import Poängliga from '../components/Poängliga/Poängliga'
 import Matchinfo from '../components/Matchinfo/Matchinfo'
 import Addplayer from '../components/Addplayer/Addplayer'
 import ToggleBetween from '../components/1.General/ToggleBetween/ToggleBetween'
+import Matchkort from '../components/Matchkort/Matchkort'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Poängliga />
       <Matchinfo />
       <ToggleBetween />
+      <Matchkort />
 
       <main className={styles.main}>
         <h1 className={styles.title}>to GrassRoot Inc.</h1>

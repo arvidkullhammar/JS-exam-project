@@ -22,6 +22,7 @@ export default function LagInfo(props) {
         {props.players.map((player) => (
           <div key={player.id}>
             <p>{player.name}</p>
+            <p>{player.number}</p>
             <Image
               src={jersey}
               alt="Picture of a jersey"

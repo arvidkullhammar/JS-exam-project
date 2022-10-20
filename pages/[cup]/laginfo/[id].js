@@ -7,6 +7,7 @@ import jersey from '../../../Images/lagtröja.png';
 import Addplayer from '../../../components/Addplayer/Addplayer';
 
 export default function LagInfo(props) {
+
   return (
     <main className={classes.lagInfoContainer}>
       <header className={classes.headerLogo}>

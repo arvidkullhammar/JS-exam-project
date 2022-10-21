@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './Poängliga.module.css'
+import classes from './Poangliga.module.css'
 
 function Poängliga() {
   return (

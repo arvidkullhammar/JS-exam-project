@@ -4,7 +4,6 @@ export default function Addplayer(props) {
   const {team,parentStateCallback} = props
   const [name, setName] = useState("name");
   const [number, setNumber] = useState(0);
-/*   const [team, setTeam] = useState(1); */
 
   const addPlayer = async () => {
     await fetch("http://localhost:3000/api/players/add", {

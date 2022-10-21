@@ -1,37 +1,22 @@
-const category = ["spelschema", "tabell", "poangliga", "spelschema", "cupinfo"];
-import BackButton from "../../components/1.General/BackButton/backButton";
+/** @format */
+import React from "react";
+import Matchkort from "../../components/Matchkort/Matchkort";
+import ToggleBetween from "../../components/1.General/ToggleBetween/ToggleBetween";
+import Datum from "../../components/1.General/Datum/Datum";
+import Image from "next/future/image";
+import headerImg from "../.././Images/header/audience-gffb00a2c7_1920.jpg";
+import classes from "./spelschema.module.css";
 
-const Comp = (props) => {
-  console.warn(props);
+export default function SpelschemaSida(props) {
   return (
-    <div>
-      Kategori: {props.id}
-      <BackButton />
-    </div>
+    <>
+      <Image className={classes.heroImg} src={headerImg} alt="photo of leksand logo" width="50px" height="50px" />
+      <Datum />
+      <ToggleBetween />
+      <Matchkort />
+      <Matchkort />
+      <Matchkort />
+      <Matchkort />
+    </>
   );
-};
-
-export async function getServerSideProps(context) {
-  const cup = context.query.cup;
-  if (category.includes(cup)) {
-    return {
-      props: { id: cup },
-    };
-  } else {
-    return {
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
-    };
-  }
 }
-
-export default Comp;
-
-// grassroot.se / [cupnamn] / spelschema
-// grassroot.se / [cupnamn] / tabell
-// grassroot.se / [cupnamn] / poängliga
-// grassroot.se / [cupnamn] / [matchinfo]
-// grassroot.se / [cupnamn] / [laginfo]
-// grassroot.se / [cupnamn] / info

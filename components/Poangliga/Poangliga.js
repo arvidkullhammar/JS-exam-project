@@ -1,16 +1,14 @@
 import React from 'react'
-import classes from './Poängliga.module.css'
+import classes from './Poangliga.module.css'
 
-function Poängliga() {
+function Poangliga() {
   return (
-    <div>
+    <div className={classes.container}>
       <table className={classes.tabellStyling}>
-        <thead>
-          <tr>
-            <th className={classes.textLeft}>Spelare</th>
-            <th>Poäng</th>
-          </tr>
-        </thead>
+        <tr>
+          <th className={classes.textLeft}>Spelare</th>
+          <th>Poäng</th>
+        </tr>
         <tbody>
           <tr>
             <td className={classes.textLeft}>0</td>
@@ -45,4 +43,4 @@ function Poängliga() {
     </div>
   )
 }
-export default Poängliga
+export default Poangliga

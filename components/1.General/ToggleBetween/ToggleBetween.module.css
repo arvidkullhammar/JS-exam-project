@@ -13,8 +13,8 @@
 }
 
 .squared {
-  border-top: 1px outset black;
-  border-bottom: 1px outset black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   color: black;
   background-color: white;
   width: 33.33%;
@@ -23,9 +23,9 @@
 }
 
 .leftRadius {
-  border-top: 1px outset black;
-  border-left: 1px outset black;
-  border-bottom: 1px outset black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
   color: black;
   background-color: white;
   width: 33.33%;
@@ -46,4 +46,25 @@
   margin-bottom: 20px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.leftRadius:hover {
+  background-color: #000000;
+  color: white;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.squared:hover {
+  background-color: #000000;
+  color: white;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.rightRadius:hover {
+  background-color: #000000;
+  color: white;
+  transition: 0.3s linear;
+  cursor: pointer;
 }

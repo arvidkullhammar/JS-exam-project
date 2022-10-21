@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function Addplayer(props) {
+  const {team,parentStateCallback} = props
   const [name, setName] = useState("name");
   const [number, setNumber] = useState(0);
 /*   const [team, setTeam] = useState(1); */
@@ -12,7 +13,7 @@ export default function Addplayer(props) {
       body: JSON.stringify({
         name: name,
         number: Number(number),
-        team: Number(props.team),
+        team: Number(team),
       }),
     })
       .then((data) => console.log(data))
@@ -20,7 +21,7 @@ export default function Addplayer(props) {
 
       setName("Name")
       setNumber(0)
-/*       setTeam(0) */
+      parentStateCallback()
   };
 
   return (

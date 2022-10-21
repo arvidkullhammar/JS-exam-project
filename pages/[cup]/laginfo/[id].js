@@ -1,12 +1,24 @@
 /** @format */
-import Image from 'next/future/image';
-import React from 'react';
-import classes from '../../../styles/LagInfo.module.css';
-import Klubbloggor from '../../../components/LagInfoComponents/Klubbloggor';
-import jersey from '../../../Images/lagtröja.png';
-import Addplayer from '../../../components/Addplayer/Addplayer';
+import Image from "next/future/image";
+import React, { useEffect } from "react";
+import classes from "../../../styles/LagInfo.module.css";
+import Klubbloggor from "../../../components/LagInfoComponents/Klubbloggor";
+import jersey from "../../../Images/lagtröja.png";
+import Addplayer from "../../../components/Addplayer/Addplayer";
+import { useState } from "react";
 
 export default function LagInfo(props) {
+
+
+  //Updatera player roster när ny spelare läggs till
+  const [playerState, setPlayerState] = useState(0)
+  useEffect(() => {
+    console.log('updated player roster')
+  },[playerState])
+  const addCallback = () => {
+    setPlayerState(playerState + 1);
+  
+  };
 
   return (
     <main className={classes.lagInfoContainer}>
@@ -37,7 +49,7 @@ export default function LagInfo(props) {
           </div>
         ))}
       </div>
-      <Addplayer team={props.id} />
+      <Addplayer team={props.id} parentStateCallback={addCallback} />
       <div className={classes.omkladningsRum}>Omklädningsrum</div>
       <div className={classes.hittaHit}>Hitta hit</div>
       <div className={classes.viktigInfo}>
@@ -54,7 +66,10 @@ export async function getServerSideProps({ params }) {
     fetch(`http://localhost:3000/api/teams/${params.id}`),
     fetch(`http://localhost:3000/api/players/${params.id}`),
   ]);
-  const [team, players] = await Promise.all([teamRes.json(), playersRes.json()]);
+  const [team, players] = await Promise.all([
+    teamRes.json(),
+    playersRes.json(),
+  ]);
   console.log(players);
   console.log(team);
   return {

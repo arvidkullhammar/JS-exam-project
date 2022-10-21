@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './Poangliga.module.css'
 
-function Poängliga() {
+function Poangliga() {
   return (
     <div>
       <table className={classes.tabellStyling}>
@@ -45,4 +45,4 @@ function Poängliga() {
     </div>
   )
 }
-export default Poängliga
+export default Poangliga

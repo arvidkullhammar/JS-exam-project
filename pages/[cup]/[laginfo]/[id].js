@@ -6,7 +6,7 @@ import Klubbloggor from "../../../components/LagInfoComponents/Klubbloggor";
 import jersey from "../../../Images/lagtröja.png";
 import Addplayer from "../../../components/Addplayer/Addplayer";
 import { useState } from "react";
-import Router from 'next/router';
+import Router from "next/router";
 
 export default function LagInfo(props) {
   //Updatera player roster när ny spelare läggs till
@@ -21,35 +21,34 @@ export default function LagInfo(props) {
   //Loading screen
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    Router.events.on('routeChangeStart', () => setLoading(true));
-    Router.events.on('routeChangeComplete', () => setLoading(false));
-    Router.events.on('routeChangeError', () => setLoading(false));
+    Router.events.on("routeChangeStart", () => setLoading(true));
+    Router.events.on("routeChangeComplete", () => setLoading(false));
+    Router.events.on("routeChangeError", () => setLoading(false));
     return () => {
-      Router.events.off('routeChangeStart', () => setLoading(true));
-      Router.events.off('routeChangeComplete', () => setLoading(false));
-      Router.events.off('routeChangeError', () => setLoading(false));
+      Router.events.off("routeChangeStart", () => setLoading(true));
+      Router.events.off("routeChangeComplete", () => setLoading(false));
+      Router.events.off("routeChangeError", () => setLoading(false));
     };
   }, [Router.events]);
-if (loading) {
-  console.log('loading')
-  return <div>Loading</div>
-}
+  if (loading) {
+    console.log("loading");
+    return <div>Loading</div>;
+  }
 
   return (
     <main className={classes.lagInfoContainer}>
-      
       <header className={classes.headerLogo}>
         <Klubbloggor />
-        <h1>LAGNAMN IF</h1>
+        <h1>{props.teamName}</h1>
       </header>
       <div className={classes.kontaktInfo}>
         <h2>Kontaktinfo</h2>
-        {/* <p>{props.admin}</p>
-        <p>{props.email}</p> */}
+        <p>{props.admin}</p>
+        <p>{props.email}</p>
       </div>
       <div className={classes.spelarTrupp}>
         <h2 className={classes.spelarTruppText}>Spelartrupp</h2>
-        {/* <div>
+        <div>
           {props.players.map((player) => (
             <div key={player.id}>
               <p>{player.name}</p>
@@ -59,7 +58,7 @@ if (loading) {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
       <Addplayer team={props.id} parentStateCallback={addCallback} />
       <div className={classes.omkladningsRum}>Omklädningsrum</div>
@@ -72,22 +71,22 @@ if (loading) {
   );
 }
 
-// export async function getServerSideProps({ params }) {
-//   const [teamRes, playersRes] = await Promise.all([
-//     fetch(`http://localhost:3000/api/teams/${params.id}`),
-//     fetch(`http://localhost:3000/api/players/${params.id}`),
-//   ]);
-//   const [team, players] = await Promise.all([teamRes.json(), playersRes.json()]);
-//   console.log(players);
-//   console.log(team);
-//   return {
-//     props: {
-//       id: team.id,
-//       email: team.email,
-//       teamName: team.name,
-//       abr: team.abr,
-//       admin: team.admin,
-//       players,
-//     },
-//   };
-// }
+export async function getServerSideProps({ params }) {
+  const [teamRes, playersRes] = await Promise.all([
+    fetch(`http://localhost:3000/api/teams/${params.id}`),
+    fetch(`http://localhost:3000/api/players/${params.id}`),
+  ]);
+  const [team, players] = await Promise.all([teamRes.json(), playersRes.json()]);
+  console.log(players);
+  console.log(team);
+  return {
+    props: {
+      id: team.id,
+      email: team.email,
+      teamName: team.name,
+      abr: team.abr,
+      admin: team.admin,
+      players,
+    },
+  };
+}

@@ -12,7 +12,7 @@ function ToggleBetween() {
         <Link href="/orncupen/tabell">
           <div className={classes.squared}>Tabell</div>
         </Link>
-        <Link href="/orncupen/tabell">
+        <Link href="/orncupen/poangliga">
           <div className={classes.rightRadius}>Poängliga</div>
         </Link>
       </div>

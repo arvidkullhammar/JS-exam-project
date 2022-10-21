@@ -5,17 +5,19 @@ function Tabell() {
   return (
     <div className={classes.container}>
       <table className={classes.tabellStyling}>
-        <tr>
-          <th className={classes.textLeft}>Lag</th>
-          <th>S</th>
-          <th>W</th>
-          <th>O</th>
-          <th>L</th>
-          <th>GM</th>
-          <th>IL</th>
-          <th>MS</th>
-          <th>P</th>
-        </tr>
+        <thead>
+          <tr>
+            <th className={classes.textLeft}>Lag</th>
+            <th>S</th>
+            <th>W</th>
+            <th>O</th>
+            <th>L</th>
+            <th>GM</th>
+            <th>IL</th>
+            <th>MS</th>
+            <th>P</th>
+          </tr>
+        </thead>
         <tbody>
           <tr>
             <td className={classes.textLeft}>0</td>

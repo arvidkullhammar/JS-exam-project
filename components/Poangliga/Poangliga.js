@@ -5,10 +5,12 @@ function Poangliga() {
   return (
     <div className={classes.container}>
       <table className={classes.tabellStyling}>
-        <tr>
-          <th className={classes.textLeft}>Spelare</th>
-          <th>Poäng</th>
-        </tr>
+        <thead>
+          <tr>
+            <th className={classes.textLeft}>Spelare</th>
+            <th>Poäng</th>
+          </tr>
+        </thead>
         <tbody>
           <tr>
             <td className={classes.textLeft}>0</td>

@@ -1,8 +1,8 @@
 /** @format */
 
-import React from 'react';
-import classes from './Matchkort.module.css';
-import MatchinfoKnapp from '../../components/1.General/MatchinfoKnapp/MatchinfoKnapp';
+import React from "react";
+import classes from "./Matchkort.module.css";
+import MatchinfoKnapp from "../../components/1.General/MatchinfoKnapp/MatchinfoKnapp";
 
 function Matchkort() {
   return (
@@ -11,8 +11,12 @@ function Matchkort() {
       <div className={classes.div2}>
         <span className={classes.textWrap}>i</span>
       </div>
-      <div className={classes.div3}>Domsjö IF - Modo FF</div>
-      <div className={classes.div4}>P15</div>
+      <div className={classes.div3}>
+        <b>Domsjö IF - Modo FF </b>
+      </div>
+      <div className={classes.div4}>
+        <b>P15</b>
+      </div>
       <div className={classes.div5}>Matchen pågår</div>
       <div className={classes.div6}>Kempevallen</div>
       <div className={classes.div7}>13- 37</div>

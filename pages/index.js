@@ -1,14 +1,14 @@
 /** @format */
 
-import styles from '../styles/Home.module.css'
-import CupInfoKnapp from '../components/1.General/CupInfoknapp/CupInfoKnapp'
-import Tabell from '../components/Tabell/Tabell'
-import Poängliga from '../components/Poangliga/Poangliga'
-import Matchinfo from '../components/Matchinfo/Matchinfo'
-import Addplayer from '../components/Addplayer/Addplayer'
-import ToggleBetween from '../components/1.General/ToggleBetween/ToggleBetween'
-import Matchkort from '../components/Matchkort/Matchkort'
-import BackButton from '../components/1.General/BackButton/BackButton'
+import styles from "../styles/Home.module.css";
+import CupInfoKnapp from "../components/1.General/CupInfoknapp/CupInfoKnapp";
+import Tabell from "../components/Tabell/Tabell";
+import Poängliga from "../components/Poangliga/Poangliga";
+import Matchinfo from "../components/Matchinfo/Matchinfo";
+import Addplayer from "../components/Addplayer/Addplayer";
+import ToggleBetween from "../components/1.General/ToggleBetween/ToggleBetween";
+import Matchkort from "../components/Matchkort/Matchkort";
+import BackButton from "../components/1.General/BackButton/BackButton";
 
 export default function Home() {
   return (
@@ -29,5 +29,5 @@ export default function Home() {
       </main>
       <Addplayer />
     </div>
-  )
+  );
 }

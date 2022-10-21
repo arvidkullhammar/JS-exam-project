@@ -1,14 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
+import HomeIcon from '@mui/icons-material/Home'
 
 const BackButton = () => {
   return (
     <div>
-      <ul>
-        <Link href="/">
-          <a href="">⬅</a>
-        </Link>
-      </ul>
+      <HomeIcon />
     </div>
   )
 }

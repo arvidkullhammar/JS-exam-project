@@ -1,9 +1,20 @@
+.container {
+  color: black;
+  margin: 10px;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  text-indent: 10px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+}
+
 .tabellStyling {
   width: 100%;
   background-color: #ffffff;
   border-collapse: collapse;
   color: #000000;
   text-align: center;
+  border-radius: 6px;
 }
 
 .textLeft {
@@ -13,6 +24,7 @@
 table.tabellStyling {
   width: 100%;
   border-collapse: collapse;
+  border-radius: 6px;
 }
 
 table.tabellStyling td,
@@ -21,5 +33,7 @@ table.tabellStyling th {
 }
 
 table.tabellStyling thead {
-  background-color: #ffcc00;
+  background-color: #000000;
+  color: white;
+  border-radius: 6px;
 }

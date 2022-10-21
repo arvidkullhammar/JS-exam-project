@@ -47,3 +47,24 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.leftRadius:hover {
+  background-color: #000000;
+  color: white;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.squared:hover {
+  background-color: #000000;
+  color: white;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.rightRadius:hover {
+  background-color: #000000;
+  color: white;
+  transition: 0.3s linear;
+  cursor: pointer;
+}

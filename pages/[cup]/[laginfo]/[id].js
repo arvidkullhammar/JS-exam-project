@@ -6,6 +6,7 @@ import Klubbloggor from "../../../components/LagInfoComponents/Klubbloggor";
 import jersey from "../../../Images/lagtröja.png";
 import Addplayer from "../../../components/Addplayer/Addplayer";
 import { useState } from "react";
+import Router from "next/router";
 
 export default function LagInfo(props) {
   //Updatera player roster när ny spelare läggs till
@@ -16,6 +17,23 @@ export default function LagInfo(props) {
   const addCallback = () => {
     setPlayerState(playerState + 1);
   };
+
+  //Loading screen
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    Router.events.on("routeChangeStart", () => setLoading(true));
+    Router.events.on("routeChangeComplete", () => setLoading(false));
+    Router.events.on("routeChangeError", () => setLoading(false));
+    return () => {
+      Router.events.off("routeChangeStart", () => setLoading(true));
+      Router.events.off("routeChangeComplete", () => setLoading(false));
+      Router.events.off("routeChangeError", () => setLoading(false));
+    };
+  }, [Router.events]);
+  if (loading) {
+    console.log("loading");
+    return <div>Loading</div>;
+  }
 
   return (
     <main className={classes.lagInfoContainer}>
@@ -49,7 +67,6 @@ export default function LagInfo(props) {
         Viktig information
         <p>rea på kaffe. 5 kr st!</p>
       </div>
-      f
     </main>
   );
 }

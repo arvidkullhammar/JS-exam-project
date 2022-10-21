@@ -13,8 +13,8 @@
 }
 
 .squared {
-  border-top: 1px outset black;
-  border-bottom: 1px outset black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   color: black;
   background-color: white;
   width: 33.33%;
@@ -23,9 +23,9 @@
 }
 
 .leftRadius {
-  border-top: 1px outset black;
-  border-left: 1px outset black;
-  border-bottom: 1px outset black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
   color: black;
   background-color: white;
   width: 33.33%;

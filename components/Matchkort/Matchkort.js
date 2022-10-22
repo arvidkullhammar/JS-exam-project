@@ -1,8 +1,8 @@
 /** @format */
 
-import React from "react";
-import classes from "./Matchkort.module.css";
-import MatchinfoKnapp from "../../components/1.General/MatchinfoKnapp/MatchinfoKnapp";
+import React from 'react';
+import classes from './Matchkort.module.css';
+import MatchinfoKnapp from '../../components/1.General/MatchinfoKnapp/MatchinfoKnapp';
 
 function Matchkort() {
   return (

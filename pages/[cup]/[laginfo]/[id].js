@@ -1,18 +1,18 @@
 /** @format */
-import Image from "next/future/image";
-import React, { useEffect } from "react";
-import classes from "./Laginfo.module.css";
-import Klubbloggor from "../../../components/LagInfoComponents/Klubbloggor";
-import jersey from "../../../Images/lagtröja.png";
-import Addplayer from "../../../components/Addplayer/Addplayer";
-import { useState } from "react";
-import Router from "next/router";
+import Image from 'next/future/image';
+import React, { useEffect } from 'react';
+import classes from './Laginfo.module.css';
+import Klubbloggor from '../../../components/LagInfoComponents/Klubbloggor';
+import jersey from '../../../Images/lagtröja.png';
+import Addplayer from '../../../components/Addplayer/Addplayer';
+import { useState } from 'react';
+import Router from 'next/router';
 
 export default function LagInfo(props) {
   //Updatera player roster när ny spelare läggs till
   const [playerState, setPlayerState] = useState(0);
   useEffect(() => {
-    console.log("updated player roster");
+    console.log('updated player roster');
   }, [playerState]);
   const addCallback = () => {
     setPlayerState(playerState + 1);
@@ -21,17 +21,17 @@ export default function LagInfo(props) {
   //Loading screen
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    Router.events.on("routeChangeStart", () => setLoading(true));
-    Router.events.on("routeChangeComplete", () => setLoading(false));
-    Router.events.on("routeChangeError", () => setLoading(false));
+    Router.events.on('routeChangeStart', () => setLoading(true));
+    Router.events.on('routeChangeComplete', () => setLoading(false));
+    Router.events.on('routeChangeError', () => setLoading(false));
     return () => {
-      Router.events.off("routeChangeStart", () => setLoading(true));
-      Router.events.off("routeChangeComplete", () => setLoading(false));
-      Router.events.off("routeChangeError", () => setLoading(false));
+      Router.events.off('routeChangeStart', () => setLoading(true));
+      Router.events.off('routeChangeComplete', () => setLoading(false));
+      Router.events.off('routeChangeError', () => setLoading(false));
     };
   }, [Router.events]);
   if (loading) {
-    console.log("loading");
+    console.log('loading');
     return <div>Loading</div>;
   }
 
@@ -50,21 +50,36 @@ export default function LagInfo(props) {
         <h2 className={classes.spelarTruppText}>Spelartrupp</h2>
         <div>
           {props.players.map((player) => (
-            <div key={player.id}>
-              <p>{player.name}</p>
+            <div className={classes.spelarDiv} key={player.id}>
+              <p className={classes.spelare}>{player.name}</p>
               <div className={classes.jerseyContainer}>
-                <Image src={jersey} alt="Picture of a jersey" width="50px" height="50px" className={classes.jersey} />
-                <p className={classes.jerseyNumber}>{player.number}</p>
+                <Image
+                  src={jersey}
+                  alt="Picture of a jersey"
+                  width="50px"
+                  height="50px"
+                  className={classes.jersey}
+                />
+                <p className={classes.jerseyNumber}>
+                  <b>{player.number}</b>
+                </p>
               </div>
             </div>
           ))}
         </div>
       </div>
       <Addplayer team={props.id} parentStateCallback={addCallback} />
-      <div className={classes.omkladningsRum}>Omklädningsrum</div>
-      <div className={classes.hittaHit}>Hitta hit</div>
+      <div className={classes.omkladningsRum}>
+        <h2>Omklädningsrum</h2>
+        <p>Rum 3B i Örnhallen</p>
+      </div>
+      <div className={classes.hittaHit}>
+        <h2>Hitta hit</h2>
+        <p>Santa Barbara Street 34</p>
+        <p>Saint Row aveny 4</p>
+      </div>
       <div className={classes.viktigInfo}>
-        Viktig information
+        <h2>Viktig information</h2>
         <p>rea på kaffe. 5 kr st!</p>
       </div>
     </main>

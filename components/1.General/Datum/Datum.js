@@ -2,7 +2,6 @@
 
 import React from 'react';
 import classes from './Datum.module.css';
-import moment from 'moment';
 import { DateTime } from 'luxon';
 
 function Datum() {

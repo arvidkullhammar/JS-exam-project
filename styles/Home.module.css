@@ -1,0 +1,10 @@
+/** @format */
+
+.container {
+  display: flex;
+}
+
+.title {
+  text-indent: 10px;
+  color: #348c31;
+}

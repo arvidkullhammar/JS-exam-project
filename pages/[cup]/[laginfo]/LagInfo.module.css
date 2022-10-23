@@ -7,7 +7,7 @@
 
   grid-template-rows: repeat(8, 1fr);
 
-  grid-column-gap: 5px;
+  grid-column-gap: 10px;
 
   grid-row-gap: 10px;
 
@@ -42,7 +42,7 @@
 .spelarTrupp {
   grid-area: 3 / 2 / 7 / 3;
   background-color: #fff;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   border-radius: 10px;
   color: black;
   text-indent: 5px;
@@ -51,9 +51,18 @@
   flex-direction: column;
 }
 
+.spelarDiv {
+  display: flex;
+}
+
+.spelare {
+  width: 50%;
+  text-indent: 10px;
+}
+
 .jersey {
-  max-height: 50px;
-  max-width: 50px;
+  max-height: 35px;
+  max-width: 40px;
   grid-column: 1;
   grid-row: 1;
 }
@@ -63,49 +72,53 @@
   grid-row: 1;
   z-index: 1;
   position: relative;
+  left: -2px;
 }
 
 .jerseyContainer {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1fr;
-  width: 100%;
+  width: 50%;
   place-items: center;
+  height: 30%;
 }
 
 .kontaktInfo {
   grid-area: 3 / 1 / 5 / 2;
   background-color: #fff;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  font-size: 8px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  font-size: 15px;
   border-radius: 10px;
   color: black;
-  text-indent: 5px;
+  text-indent: 10px;
 }
 
 .omkladningsRum {
   grid-area: 5 / 1 / 7 / 2;
   background-color: #fff;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   border-radius: 10px;
   color: black;
-  text-indent: 5px;
+  text-indent: 10px;
+  font-size: 12px;
 }
 
 .hittaHit {
   grid-area: 7 / 1 / 9 / 2;
   background-color: #fff;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   border-radius: 10px;
   color: black;
-  text-indent: 5px;
+  text-indent: 10px;
 }
 
 .viktigInfo {
   grid-area: 7 / 2 / 9 / 3;
   background-color: #fae2e2;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   border-radius: 10px;
   color: black;
   text-indent: 5px;
+  font-size: 12px;
 }

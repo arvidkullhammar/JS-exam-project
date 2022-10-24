@@ -3,5 +3,9 @@ import Matchkort from "../../../components/Matchkort/Matchkort";
 import Matchinfo from "../../../components/Matchinfo/Matchinfo";
 
 export default function matchInfoPages() {
-  return <div>{Matchinfo}</div>;
+  return (
+    <div>
+      <Matchinfo />
+    </div>
+  );
 }

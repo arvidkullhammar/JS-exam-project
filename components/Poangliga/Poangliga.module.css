@@ -34,3 +34,11 @@ table.tabellStyling thead {
   background-color: #000000;
   color: white;
 }
+
+.roundedCornerRight {
+  border-top-right-radius: 6px;
+}
+
+.roundedCornerLeft {
+  border-top-left-radius: 6px;
+}

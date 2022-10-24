@@ -7,7 +7,7 @@ function Tabell() {
       <table className={classes.tabellStyling}>
         <thead>
           <tr>
-            <th className={classes.textLeft}>Lag</th>
+            <th className={`${classes.textLeft} ${classes.roundedCornerLeft}`}>Lag</th>
             <th>S</th>
             <th>W</th>
             <th>O</th>
@@ -15,7 +15,7 @@ function Tabell() {
             <th>GM</th>
             <th>IL</th>
             <th>MS</th>
-            <th>P</th>
+            <th className={classes.roundedCornerRight}>P</th>
           </tr>
         </thead>
         <tbody>

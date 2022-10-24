@@ -1,38 +1,38 @@
 /** @format */
-import Image from 'next/future/image';
-import React, { useEffect } from 'react';
-import classes from './Laginfo.module.css';
-import Klubbloggor from '../../../components/LagInfoComponents/Klubbloggor';
-import jersey from '../../../Images/lagtröja.png';
-import Addplayer from '../../../components/Addplayer/Addplayer';
-import { useState } from 'react';
-import Router from 'next/router';
+import Image from 'next/future/image'
+import React, { useEffect } from 'react'
+import classes from './Laginfo.module.css'
+import Klubbloggor from '../../../components/LagInfoComponents/Klubbloggor'
+import jersey from '../../../Images/lagtröja.png'
+import Addplayer from '../../../components/Addplayer/Addplayer'
+import { useState } from 'react'
+import Router from 'next/router'
 
 export default function LagInfo(props) {
   //Updatera player roster när ny spelare läggs till
-  const [playerState, setPlayerState] = useState(0);
+  const [playerState, setPlayerState] = useState(0)
   useEffect(() => {
-    console.log('updated player roster');
-  }, [playerState]);
+    console.log('updated player roster')
+  }, [playerState])
   const addCallback = () => {
-    setPlayerState(playerState + 1);
-  };
+    setPlayerState(playerState + 1)
+  }
 
   //Loading screen
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
-    Router.events.on('routeChangeStart', () => setLoading(true));
-    Router.events.on('routeChangeComplete', () => setLoading(false));
-    Router.events.on('routeChangeError', () => setLoading(false));
+    Router.events.on('routeChangeStart', () => setLoading(true))
+    Router.events.on('routeChangeComplete', () => setLoading(false))
+    Router.events.on('routeChangeError', () => setLoading(false))
     return () => {
-      Router.events.off('routeChangeStart', () => setLoading(true));
-      Router.events.off('routeChangeComplete', () => setLoading(false));
-      Router.events.off('routeChangeError', () => setLoading(false));
-    };
-  }, [Router.events]);
+      Router.events.off('routeChangeStart', () => setLoading(true))
+      Router.events.off('routeChangeComplete', () => setLoading(false))
+      Router.events.off('routeChangeError', () => setLoading(false))
+    }
+  }, [Router.events])
   if (loading) {
-    console.log('loading');
-    return <div>Loading</div>;
+    console.log('loading')
+    return <div>Loading</div>
   }
 
   return (
@@ -53,13 +53,7 @@ export default function LagInfo(props) {
             <div className={classes.spelarDiv} key={player.id}>
               <p className={classes.spelare}>{player.name}</p>
               <div className={classes.jerseyContainer}>
-                <Image
-                  src={jersey}
-                  alt="Picture of a jersey"
-                  width="50px"
-                  height="50px"
-                  className={classes.jersey}
-                />
+                <Image src={jersey} alt="Picture of a jersey" width="50px" height="50px" className={classes.jersey} />
                 <p className={classes.jerseyNumber}>
                   <b>{player.number}</b>
                 </p>
@@ -83,17 +77,14 @@ export default function LagInfo(props) {
         <p>rea på kaffe. 5 kr st!</p>
       </div>
     </main>
-  );
+  )
 }
 
 export async function getServerSideProps({ params }) {
-  const [teamRes, playersRes] = await Promise.all([
-    fetch(`http://localhost:3000/api/teams/${params.id}`),
-    fetch(`http://localhost:3000/api/players/${params.id}`),
-  ]);
-  const [team, players] = await Promise.all([teamRes.json(), playersRes.json()]);
-  console.log(players);
-  console.log(team);
+  const [teamRes, playersRes] = await Promise.all([fetch(`http://localhost:3000/api/teams/${params.id}`), fetch(`http://localhost:3000/api/players/${params.id}`)])
+  const [team, players] = await Promise.all([teamRes.json(), playersRes.json()])
+  console.log(players)
+  console.log(team)
   return {
     props: {
       id: team.id,
@@ -103,5 +94,5 @@ export async function getServerSideProps({ params }) {
       admin: team.admin,
       players,
     },
-  };
+  }
 }

@@ -3,9 +3,11 @@
 import React from "react";
 import classes from "./Matchkort.module.css";
 import MatchinfoKnapp from "../../components/1.General/MatchinfoKnapp/MatchinfoKnapp";
+import Link from "next/link";
 
 function Matchkort(props) {
   return (
+    <Link href={`/orncupen/matchinfo/${props.team1.id}/${props.team2.id}`}>
     <div className={classes.container}>
       <div className={classes.div1}>Mån 13 nov, 10:00</div>
       <div className={classes.div2}>
@@ -23,6 +25,7 @@ function Matchkort(props) {
       <div className={classes.div6}>Kempevallen</div>
       <div className={classes.div7}>13- 37</div>
     </div>
+    </Link>
   );
 }
 export default Matchkort;

@@ -10,7 +10,7 @@ import classes from "./spelschema.module.css";
 export default function SpelschemaSida(props) {
   return (
     <>
-      <Image className={classes.heroImg} src={headerImg} alt="photo of leksand logo" width="50px" height="50px" />
+      <Image className={classes.heroImg} src={headerImg} alt="photo of leksand logo!" width="50px" height="50px" />
       <Datum />
       <ToggleBetween />
       <Matchkort team1={props.teamId[0]} team2={props.teamId[1]} />

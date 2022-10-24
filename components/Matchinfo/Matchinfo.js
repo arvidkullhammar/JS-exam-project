@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./Matchinfo.module.css";
 
-function Matchinfo() {
+function Matchinfo(props) {
+  console.log(props)
   return (
     <div>
       <table className={classes.tabellStyling}>

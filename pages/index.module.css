@@ -1,3 +1,5 @@
+/** @format */
+
 .container {
   background-color: #348c31;
   height: 100vh;
@@ -5,10 +7,11 @@
 }
 
 .containerImg {
-  background-image: url("../Images/landing.jpg");
+  background-image: url('../Images/landing.jpg');
 
   object-fit: cover;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   opacity: 0.1;
 }

@@ -24,6 +24,7 @@
   color: black;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .spelarTruppText {
@@ -53,6 +54,10 @@
 
 .spelarDiv {
   display: flex;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 5px;
+  /* background-color: #348c31; */
+  border-radius: 6px;
 }
 
 .spelare {
@@ -62,7 +67,7 @@
 
 .jersey {
   max-height: 35px;
-  max-width: 40px;
+  max-width: 50px;
   grid-column: 1;
   grid-row: 1;
 }
@@ -72,7 +77,7 @@
   grid-row: 1;
   z-index: 1;
   position: relative;
-  left: -2px;
+  left: -2.5px;
 }
 
 .jerseyContainer {

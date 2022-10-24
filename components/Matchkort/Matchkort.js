@@ -1,10 +1,10 @@
 /** @format */
 
-import React from 'react';
-import classes from './Matchkort.module.css';
-import MatchinfoKnapp from '../../components/1.General/MatchinfoKnapp/MatchinfoKnapp';
+import React from "react";
+import classes from "./Matchkort.module.css";
+import MatchinfoKnapp from "../../components/1.General/MatchinfoKnapp/MatchinfoKnapp";
 
-function Matchkort() {
+function Matchkort(props) {
   return (
     <div className={classes.container}>
       <div className={classes.div1}>Mån 13 nov, 10:00</div>
@@ -12,7 +12,9 @@ function Matchkort() {
         <span className={classes.textWrap}>i</span>
       </div>
       <div className={classes.div3}>
-        <b>Domsjö IF - Modo FF </b>
+        <b>
+          {props.team1.name} - {props.team2.name}
+        </b>
       </div>
       <div className={classes.div4}>
         <b>P15</b>
@@ -24,15 +26,3 @@ function Matchkort() {
   );
 }
 export default Matchkort;
-
-{
-  /* <div className={classes.container}>
-<div>Mån 13 nov, 10:00</div>
-<div>Infoknapp</div>
-<div>Domsjö IF - Modo FF</div>
-<div>P15</div>
-<div>Kempevallen</div>
-<div className={classes.matchInfo}>Matchen pågår</div>
-<div className={classes.resultat}>13- 37</div>
-</div> */
-}

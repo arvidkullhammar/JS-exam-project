@@ -13,13 +13,23 @@ export default function SpelschemaSida(props) {
       <Image className={classes.heroImg} src={headerImg} alt="photo of leksand logo" width="50px" height="50px" />
       <Datum />
       <ToggleBetween />
-      <Matchkort />
-      <Matchkort />
-      <Matchkort />
-      <Matchkort />
+      <Matchkort team1={props.teamId[0]} team2={props.teamId[1]} />
+      <Matchkort team1={props.teamId[2]} team2={props.teamId[3]} />
+      <Matchkort team1={props.teamId[4]} team2={props.teamId[5]} />
+      <Matchkort team1={props.teamId[1]} team2={props.teamId[0]} />
     </>
   )
 }
 
-// "sv-SE"
-// .toLocaleString({ locale: "sv-SE" })
+export async function getServerSideProps(context) {
+  const response = await fetch(`http://localhost:3000/api/teams/`)
+  const data = await response.json()
+
+  console.log(data)
+
+  return {
+    props: {
+      teamId: data,
+    },
+  }
+}

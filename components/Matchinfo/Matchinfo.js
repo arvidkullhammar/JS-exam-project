@@ -1,5 +1,5 @@
-import React from 'react'
-import classes from './Matchinfo.module.css'
+import React from "react";
+import classes from "./Matchinfo.module.css";
 
 function Matchinfo() {
   return (
@@ -31,6 +31,6 @@ function Matchinfo() {
         </tbody>
       </table>
     </div>
-  )
+  );
 }
-export default Matchinfo
+export default Matchinfo;

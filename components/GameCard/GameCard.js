@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 function GameCard(props) {
   return (
-    <Link href={`/orncupen/GameInfo/${props.team1.id}/${props.team2.id}`}>
+    <Link href={`/orncupen/matchinfo/${props.team1.id}/${props.team2.id}`}>
       <div className={classes.container}>
         <div className={classes.div1}>Mån 13 nov, 10:00</div>
         <div className={classes.div2}>

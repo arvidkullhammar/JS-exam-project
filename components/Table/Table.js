@@ -3,7 +3,6 @@ import classes from './Table.module.css'
 import Tooltip from '@mui/material/Tooltip'
 
 function Tabell(props) {
-  console.log(props.teams)
   return (
     <div className={classes.container}>
       <table className={classes.tabellStyling}>
@@ -38,7 +37,7 @@ function Tabell(props) {
         </thead>
         <tbody>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>{props.teams[0].name}</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
@@ -49,7 +48,7 @@ function Tabell(props) {
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>{props.teams[1].name}</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
@@ -60,7 +59,7 @@ function Tabell(props) {
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>{props.teams[2].name}</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
@@ -71,7 +70,7 @@ function Tabell(props) {
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>{props.teams[3].name}</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
@@ -82,7 +81,7 @@ function Tabell(props) {
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>{props.teams[4].name}</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
@@ -93,18 +92,7 @@ function Tabell(props) {
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>{props.teams[5].name}</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>

@@ -15,4 +15,4 @@ function TournamentInfo() {
     </main>
   )
 }
-export default Cupinfo
+export default TournamentInfo

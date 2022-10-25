@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './ScoringLeader.module.css'
 
-function Poangliga() {
+function ScoringLeader() {
   return (
     <div className={classes.container}>
       <table className={classes.tabellStyling}>
@@ -45,4 +45,4 @@ function Poangliga() {
     </div>
   )
 }
-export default Poangliga
+export default ScoringLeader

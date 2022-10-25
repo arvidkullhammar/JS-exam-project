@@ -7,7 +7,7 @@ import Image from 'next/future/image'
 import headerImg from '../.././Images/header/audience-gffb00a2c7_1920.jpg'
 import classes from './GameSchedule.module.css'
 
-export default function SpelschemaSida(props) {
+export default function GameSchedulePage(props) {
   return (
     <>
       <Image className={classes.heroImg} src={headerImg} alt="photo of leksand logo!" width="50px" height="50px" />

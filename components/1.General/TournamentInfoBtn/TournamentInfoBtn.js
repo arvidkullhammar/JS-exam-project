@@ -1,8 +1,8 @@
 import React from 'react'
-import classes from './CupInfoBtn.module.css'
+import classes from './TournamentInfoBtn.module.css'
 import Link from 'next/link'
 
-function CupInfoBtn() {
+function TournamentInfoBtn() {
   return (
     <div className={classes.circle}>
       <Link
@@ -16,4 +16,4 @@ function CupInfoBtn() {
     </div>
   )
 }
-export default CupInfoBtn
+export default TournamentInfoBtn

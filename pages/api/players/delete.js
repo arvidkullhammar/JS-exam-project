@@ -7,16 +7,16 @@ export default async function handler(req, res) {
     return;
   } else {
     try {
-      const body = JSON.parse(req.body);
-      const deleteUser = await prisma.user.delete({
-        where: {
-          id: body.id,
-        },
-      });
+      const deleteId = JSON.parse(req.body.id);
+      const deleteUser = await prisma.players.delete({
+          where: {
+            id: deleteId,
+          },
+      })
       res.status(201).send("Player deleted!");
     } catch (e) {
       console.log(e);
-      res.status(500).send("Could not delete player");
+      res.status(500).send(e);
     }
   }
 }

@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import classes from './Table.module.css'
 import Tooltip from '@mui/material/Tooltip'
 
-function Tabell() {
+function Tabell(props) {
+  console.log(props.teams)
   return (
     <div className={classes.container}>
       <table className={classes.tabellStyling}>

@@ -7,15 +7,31 @@ import jersey from "../../../Images/lagtröja.png";
 import Addplayer from "../../../components/Addplayer/Addplayer";
 import { useState } from "react";
 import Router from "next/router";
+import DeletePlayer from "../../../components/Deleteplayer/Deleteplayer";
 
 export default function TeamInfo(props) {
-  //Updatera player roster när ny spelare läggs till
-  const [playerState, setPlayerState] = useState(0);
+  //Update roster when player is added
+  const [playerArr, setPlayerArr] = useState(props.players);
   useEffect(() => {
     console.log("updated player roster");
-  }, [playerState]);
-  const addCallback = () => {
-    setPlayerState(playerState + 1);
+  }, [playerArr]);
+  const addCallback = (obj) => {
+    let newPlayerArr = [...playerArr];
+    newPlayerArr.push(obj);
+    setPlayerArr(newPlayerArr);
+  };
+
+  //Remove roster when player is removed
+  const removeCallback = (removeId) => {
+    let newPlayerArr = [...playerArr];
+    let removePlayerIndex = newPlayerArr.find((obj) => obj.id === removeId);
+    console.log(removePlayerIndex, 'remove index')
+
+    if (removePlayerIndex > -1) {
+      newPlayerArr.slice(removePlayerIndex, 1);
+    }
+
+    setPlayerArr(newPlayerArr);
   };
 
   return (
@@ -32,15 +48,22 @@ export default function TeamInfo(props) {
       <div className={classes.spelarTrupp}>
         <h2 className={classes.spelarTruppText}>Spelartrupp</h2>
         <div>
-          {props.players.map((player) => (
+          {playerArr.map((player) => (
             <div className={classes.spelarDiv} key={player.id}>
               <p className={classes.spelare}>{player.name}</p>
               <div className={classes.jerseyContainer}>
-                <Image src={jersey} alt="Picture of a jersey" width="50px" height="50px" className={classes.jersey} />
+                <Image
+                  src={jersey}
+                  alt="Picture of a jersey"
+                  width="50px"
+                  height="50px"
+                  className={classes.jersey}
+                />
                 <p className={classes.jerseyNumber}>
                   <b>{player.number}</b>
                 </p>
               </div>
+              <DeletePlayer id ={player.id} parentStateCallback={removeCallback} />
             </div>
           ))}
         </div>
@@ -70,7 +93,10 @@ export async function getServerSideProps({ params }) {
     fetch(`http://localhost:3000/api/teams/${params.id}`),
     fetch(`http://localhost:3000/api/players/${params.id}`),
   ]);
-  const [team, players] = await Promise.all([teamRes.json(), playersRes.json()]);
+  const [team, players] = await Promise.all([
+    teamRes.json(),
+    playersRes.json(),
+  ]);
   console.log(players);
   console.log(team);
   return {

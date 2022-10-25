@@ -7,21 +7,22 @@ export default function Addplayer(props) {
   const [number, setNumber] = useState("");
 
   const addPlayer = async () => {
+    const newObj = {
+      name: name,
+        number: Number(number),
+        team: Number(team),
+    }
     await fetch("http://localhost:3000/api/players/add", {
       method: "POST",
       header: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: name,
-        number: Number(number),
-        team: Number(team),
-      }),
+      body: JSON.stringify(newObj),
     })
       .then((data) => console.log(data))
       .catch((e) => console.log("ERROR", e));
 
     setName("Name");
     setNumber(0);
-    parentStateCallback();
+    parentStateCallback(newObj);
   };
 
   return (

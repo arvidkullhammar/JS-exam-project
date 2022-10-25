@@ -1,5 +1,7 @@
-import React from "react";
-import classes from "./GameInfo.module.css";
+/** @format */
+
+import React from 'react';
+import classes from './GameInfo.module.css';
 
 function GameInfo(props) {
   console.log(props);
@@ -15,11 +17,11 @@ function GameInfo(props) {
         </div>
         <div className={classes.matchContent}>
           <div className={classes.column}>
-            <div className={`${classes.team} ${classes["team--home"]}`}>
+            <div className={`${classes.team} ${classes['team--home']}`}>
               <div className={classes.teamLogo}>
                 <img src="https://assets.codepen.io/285131/whufc.svg" />
               </div>
-              <h2 className={classes.teamName}>Uppsala If</h2>
+              <h2 className={classes.teamName}>{props.teamOne.name}</h2>
             </div>
           </div>
           <div className={classes.column}>
@@ -28,7 +30,9 @@ function GameInfo(props) {
                 12 Aug at <strong>19:00</strong>
               </div>
               <div className={classes.matchScore}>
-                <span className={`${classes.matchScoreNumber} ${classes.matchScoreNumberLeading} `}>2</span>
+                <span className={`${classes.matchScoreNumber} ${classes.matchScoreNumberLeading} `}>
+                  2
+                </span>
                 <span className={classes.matchScoreDivider}>:</span>
                 <span className={classes.matchScoreNumber}>0</span>
               </div>
@@ -39,11 +43,11 @@ function GameInfo(props) {
             </div>
           </div>
           <div className={classes.column}>
-            <div className={`${classes.team} ${classes["team--away"]}`}>
+            <div className={`${classes.team} ${classes['team--away']}`}>
               <div className={classes.teamLogo}>
                 <img src="https://assets.codepen.io/285131/chelsea.svg" />
               </div>
-              <h2 className={classes.teamName}>Årsta IF</h2>
+              <h2 className={classes.teamName}>{props.teamTwo.name}</h2>
             </div>
           </div>
         </div>

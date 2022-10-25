@@ -1,11 +1,12 @@
-import React from "react";
-import GameInfo from "../../../components/GameInfo/GameInfo";
-import { useRouter } from "next/router";
+/** @format */
+
+import React from 'react';
+import GameInfo from '../../../components/GameInfo/GameInfo';
 
 export default function gameInfoPages(props) {
-  const teamOneId = props.params.params[0];
-  const teamTwoId = props.params.params[1];
-  console.log(props);
+  const teamOneId = props.teamId[0];
+  const teamTwoId = props.teamId[1];
+
   return <div>{<GameInfo teamOne={teamOneId} teamTwo={teamTwoId} />}</div>;
 }
 

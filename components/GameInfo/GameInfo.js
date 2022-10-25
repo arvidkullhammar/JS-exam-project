@@ -27,16 +27,16 @@ function GameInfo(props) {
           <div className={classes.column}>
             <div className={classes.matchDetails}>
               <div className={classes.matchDate}>
-                12 Aug at <strong>19:00</strong>
+                28 Nov at <strong>16:00</strong>
               </div>
               <div className={classes.matchScore}>
-                <span className={`${classes.matchScoreNumber} ${classes.matchScoreNumberLeading} `}>
-                  2
-                </span>
+                <span className={`${classes.matchScoreNumber} `}>13</span>
                 <span className={classes.matchScoreDivider}>:</span>
-                <span className={classes.matchScoreNumber}>0</span>
+                <span className={`${classes.matchScoreNumber} ${classes.matchScoreNumberLeading} `}>
+                  37
+                </span>
               </div>
-              <div className={classes.matchTimeLapsed}>72'</div>
+              <div className={classes.matchTimeLapsed}>92'</div>
               <div className={classes.matchReferee}>
                 Domare: <strong>Anders Borg</strong>
               </div>

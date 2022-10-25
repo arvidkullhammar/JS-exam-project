@@ -19,7 +19,7 @@ function GameInfo(props) {
               <div className={classes.teamLogo}>
                 <img src="https://assets.codepen.io/285131/whufc.svg" />
               </div>
-              <h2 className={classes.teamName}>West Ham</h2>
+              <h2 className={classes.teamName}>Uppsala If</h2>
             </div>
           </div>
           <div className={classes.column}>
@@ -43,7 +43,7 @@ function GameInfo(props) {
               <div className={classes.teamLogo}>
                 <img src="https://assets.codepen.io/285131/chelsea.svg" />
               </div>
-              <h2 className={classes.teamName}>Bajskungarna</h2>
+              <h2 className={classes.teamName}>Årsta IF</h2>
             </div>
           </div>
         </div>

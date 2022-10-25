@@ -9,12 +9,25 @@ import classes from './GameSchedule.module.css'
 import headerImg from '../.././Images/header/audience-gffb00a2c7_1920.jpg'
 
 export default function tablePage(props) {
+  const teams = props.teamId
+  console.log(teams)
   return (
     <>
       <Image className={classes.heroImg} src={headerImg} alt="photo of leksand logo" width="50px" height="50px" />
       <Date />
       <ToggleBetween />
-      <Table />
+      <Table teamData={teams} />
     </>
   )
+}
+export async function getServerSideProps(context) {
+  const response = await fetch(`http://localhost:3000/api/teams/`)
+  const data = await response.json()
+
+
+  return {
+    props: {
+      teamId: data,
+    },
+  }
 }

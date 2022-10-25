@@ -1,8 +1,8 @@
 /** @format */
 
-import classes from './index.module.css';
-import Image from 'next/future/image';
-import landing from '.././Images/landing.jpg';
+import classes from "./index.module.css";
+import Image from "next/future/image";
+import landing from ".././Images/landing.jpg";
 
 export default function Home() {
   return (

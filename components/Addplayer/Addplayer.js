@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import classes from "./Addplayer.module.css";
 
 export default function Addplayer(props) {
   const { team, parentStateCallback } = props;
-  const [name, setName] = useState("name");
-  const [number, setNumber] = useState(0);
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
 
   const addPlayer = async () => {
     await fetch("http://localhost:3000/api/players/add", {
@@ -25,10 +26,20 @@ export default function Addplayer(props) {
 
   return (
     <div>
-      <input value={name} onChange={(e) => setName(e.target.value)} />
-      <input value={number} onChange={(e) => setNumber(e.target.value)} />
+      <input
+        className={classes.inputStyle}
+        value={name}
+        placeholder="För & Efternamn"
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        className={classes.inputStyle}
+        value={number}
+        placeholder="Tröjnummer"
+        onChange={(e) => setNumber(e.target.value)}
+      />
       {/*       <input value={team} onChange={(e) => setTeam(e.target.value)} /> */}
-      <button onClick={() => addPlayer()}>Submit</button>
+      <button onClick={() => addPlayer()}>Lägg till spelare</button>
     </div>
   );
 }

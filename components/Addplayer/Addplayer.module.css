@@ -1,0 +1,18 @@
+.inputStyle {
+  text-decoration: none;
+  border-style: none;
+  background-color: white;
+  width: 100%;
+
+  margin: 1px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 6px;
+}
+
+.inputStyle:focus {
+  border: 1px solid #555;
+}

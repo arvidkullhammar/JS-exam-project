@@ -7,7 +7,7 @@
 }
 
 .containerImg {
-  background-image: url('../Images/landing.jpg');
+  background-image: url("../Images/landing.jpg");
 
   object-fit: cover;
   width: 100%;

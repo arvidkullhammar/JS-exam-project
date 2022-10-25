@@ -1,39 +1,22 @@
 /** @format */
-import Image from 'next/future/image'
-import React, { useEffect } from 'react'
-import classes from './TeamInfo.module.css'
-import TeamLogos from '../../../components/TeamInfoComponents/TeamLogos'
-import jersey from '../../../Images/lagtröja.png'
-import Addplayer from '../../../components/Addplayer/Addplayer'
-import { useState } from 'react'
-import Router from 'next/router'
+import Image from "next/future/image";
+import React, { useEffect } from "react";
+import classes from "./TeamInfo.module.css";
+import TeamLogos from "../../../components/TeamInfoComponents/TeamLogos";
+import jersey from "../../../Images/lagtröja.png";
+import Addplayer from "../../../components/Addplayer/Addplayer";
+import { useState } from "react";
+import Router from "next/router";
 
 export default function TeamInfo(props) {
   //Updatera player roster när ny spelare läggs till
-  const [playerState, setPlayerState] = useState(0)
+  const [playerState, setPlayerState] = useState(0);
   useEffect(() => {
-    console.log('updated player roster')
-  }, [playerState])
+    console.log("updated player roster");
+  }, [playerState]);
   const addCallback = () => {
-    setPlayerState(playerState + 1)
-  }
-
-  //Loading screen
-  const [loading, setLoading] = useState(false)
-  useEffect(() => {
-    Router.events.on('routeChangeStart', () => setLoading(true))
-    Router.events.on('routeChangeComplete', () => setLoading(false))
-    Router.events.on('routeChangeError', () => setLoading(false))
-    return () => {
-      Router.events.off('routeChangeStart', () => setLoading(true))
-      Router.events.off('routeChangeComplete', () => setLoading(false))
-      Router.events.off('routeChangeError', () => setLoading(false))
-    }
-  }, [Router.events])
-  if (loading) {
-    console.log('loading')
-    return <div>Loading</div>
-  }
+    setPlayerState(playerState + 1);
+  };
 
   return (
     <main className={classes.lagInfoContainer}>
@@ -62,10 +45,10 @@ export default function TeamInfo(props) {
           ))}
         </div>
       </div>
-      <Addplayer team={props.id} parentStateCallback={addCallback} />
+
       <div className={classes.omkladningsRum}>
-        <h2>Omklädningsrum</h2>
-        <p>Rum 3B i Örnhallen</p>
+        <h2>Spelarverktyg</h2>
+        <Addplayer team={props.id} parentStateCallback={addCallback} />
       </div>
       <div className={classes.hittaHit}>
         <h2>Hitta hit</h2>
@@ -74,17 +57,22 @@ export default function TeamInfo(props) {
       </div>
       <div className={classes.viktigInfo}>
         <h2>Viktig information</h2>
-        <p>rea på kaffe. 5 kr st!</p>
+        <p>
+          Mindre brand i omklädningsrum 1. <br /> Inget är under kontroll.
+        </p>
       </div>
     </main>
-  )
+  );
 }
 
 export async function getServerSideProps({ params }) {
-  const [teamRes, playersRes] = await Promise.all([fetch(`http://localhost:3000/api/teams/${params.id}`), fetch(`http://localhost:3000/api/players/${params.id}`)])
-  const [team, players] = await Promise.all([teamRes.json(), playersRes.json()])
-  console.log(players)
-  console.log(team)
+  const [teamRes, playersRes] = await Promise.all([
+    fetch(`http://localhost:3000/api/teams/${params.id}`),
+    fetch(`http://localhost:3000/api/players/${params.id}`),
+  ]);
+  const [team, players] = await Promise.all([teamRes.json(), playersRes.json()]);
+  console.log(players);
+  console.log(team);
   return {
     props: {
       id: team.id,
@@ -94,5 +82,5 @@ export async function getServerSideProps({ params }) {
       admin: team.admin,
       players,
     },
-  }
+  };
 }

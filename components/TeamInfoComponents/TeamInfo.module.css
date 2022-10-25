@@ -36,7 +36,8 @@
 .spelarTrupp {
   grid-area: 3 / 2 / 7 / 3;
   background-color: #fff;
-  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
+  /* box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px; */
   border-radius: 10px;
   color: black;
   text-indent: 5px;
@@ -85,7 +86,7 @@
 .kontaktInfo {
   grid-area: 3 / 1 / 5 / 2;
   background-color: #fff;
-  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
   font-size: 15px;
   border-radius: 10px;
   color: black;
@@ -95,7 +96,7 @@
 .omkladningsRum {
   grid-area: 5 / 1 / 7 / 2;
   background-color: #fff;
-  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
   border-radius: 10px;
   color: black;
   padding: 6px;
@@ -106,7 +107,7 @@
 .hittaHit {
   grid-area: 7 / 1 / 9 / 2;
   background-color: #fff;
-  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
   border-radius: 10px;
   color: black;
   text-indent: 10px;
@@ -115,7 +116,7 @@
 .viktigInfo {
   grid-area: 7 / 2 / 9 / 3;
   background-color: #fae2e2;
-  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
   border-radius: 10px;
   color: black;
   text-indent: 5px;

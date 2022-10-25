@@ -1,6 +1,6 @@
 /** @format */
 
-import classes from "./index.module.css";
+import classes from "../styles/index.module.css";
 import Image from "next/future/image";
 import landing from ".././Images/landing.jpg";
 

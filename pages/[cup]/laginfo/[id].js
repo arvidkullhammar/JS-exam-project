@@ -1,7 +1,7 @@
 /** @format */
 import Image from 'next/future/image'
 import React, { useEffect } from 'react'
-import classes from './TeamInfo.module.css'
+import classes from '../../../components/TeamInfoComponents/TeamInfo.module.css'
 import TeamLogos from '../../../components/TeamInfoComponents/TeamLogos'
 import jersey from '../../../Images/lagtröja.png'
 import Addplayer from '../../../components/Addplayer/Addplayer'

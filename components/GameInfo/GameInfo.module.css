@@ -1,4 +1,4 @@
-.tabellStyling {
+/* .tabellStyling {
   width: 100%;
   background-color: #ffffff;
   border-collapse: collapse;
@@ -22,4 +22,183 @@ table.tabellStyling th {
 
 table.tabellStyling thead {
   background-color: #ffcc00;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+.button,
+.input,
+.select,
+.textarea {
+  font: inherit;
+}
+
+.img {
+  display: block;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+}
+
+.match {
+  background-color: var(--color-bg-primary);
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
+  color: black;
+}
+
+.matchHeader {
+  display: flex;
+  border-bottom: 2px solid rgba(48, 48, 48, 0.1);
+  padding: 16px;
+  color: black;
+}
+
+.matchStatus {
+  background-color: var(--color-bg-alert);
+  color: var(--color-text-alert);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin-right: auto;
+  color: red;
+}
+.matchStatus:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: currentColor;
+  border-radius: 50%;
+  margin-right: 8px;
+  color: black;
+}
+
+.matchTournament {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: black;
+}
+.matchTournament img {
+  width: 20px;
+  margin-right: 12px;
+}
+
+.matchContent {
+  display: flex;
+  position: relative;
+}
+
+.column {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 3);
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamLogo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-bg-primary);
+  box-shadow: 0 4px 4px 0 rgba(48, 48, 48, 0.15), 0 0 0 15px var(--color-bg-secondary);
+}
+.teamLogo img {
+  width: 50px;
+}
+
+.teamName {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.matchDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.matchDate,
+.matchReferee {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+.matchDate strong,
+.matchReferee strong {
+  color: var(--color-text-primary);
+}
+
+.matchScore {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.matchScoreNumber {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+}
+.matchScoreSumberLeading {
+  color: var(--color-theme-primary);
+}
+
+.matchScoreSivider {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-text-icon);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.matchTimeLapsed {
+  color: #df9443;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.matchReferee {
+  margin-top: 12px;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

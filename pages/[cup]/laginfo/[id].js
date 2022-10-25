@@ -1,14 +1,14 @@
 /** @format */
 import Image from 'next/future/image'
 import React, { useEffect } from 'react'
-import classes from './Laginfo.module.css'
-import Klubbloggor from '../../../components/LagInfoComponents/Klubbloggor'
+import classes from './TeamInfo.module.css'
+import TeamLogos from '../../../components/TeamInfoComponents/TeamLogos'
 import jersey from '../../../Images/lagtröja.png'
 import Addplayer from '../../../components/Addplayer/Addplayer'
 import { useState } from 'react'
 import Router from 'next/router'
 
-export default function LagInfo(props) {
+export default function TeamInfo(props) {
   //Updatera player roster när ny spelare läggs till
   const [playerState, setPlayerState] = useState(0)
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function LagInfo(props) {
   return (
     <main className={classes.lagInfoContainer}>
       <header className={classes.headerLogo}>
-        <Klubbloggor />
+        <TeamLogos />
         <h1>{props.teamName}</h1>
       </header>
       <div className={classes.kontaktInfo}>

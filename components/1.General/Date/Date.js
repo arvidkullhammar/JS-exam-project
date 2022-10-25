@@ -1,10 +1,10 @@
 /** @format */
 
-import React from 'react';
-import classes from './Datum.module.css';
-import { DateTime } from 'luxon';
+import React from 'react'
+import classes from './Date.module.css'
+import { DateTime } from 'luxon'
 
-function Datum() {
+function Date() {
   // write a functions that shows the coming 4 days from today and resets to index 0 after the end of the array
 
   let day = DateTime.now()
@@ -15,7 +15,7 @@ function Datum() {
     .replace('Tuesday', 'Tis')
     .replace('Wednesday', 'Ons')
     .replace('Thursday', 'Tor')
-    .replace('Friday', 'Fre');
+    .replace('Friday', 'Fre')
   let tomorrow = DateTime.now()
     .plus({ days: 1 })
     .toFormat('cccc dd/MM ')
@@ -25,7 +25,7 @@ function Datum() {
     .replace('Tuesday', 'Tis')
     .replace('Wednesday', 'Ons')
     .replace('Thursday', 'Tor')
-    .replace('Friday', 'Fre');
+    .replace('Friday', 'Fre')
   let dayAftertomorrow = DateTime.now()
     .plus({ days: 2 })
     .toFormat('cccc dd/MM ')
@@ -35,7 +35,7 @@ function Datum() {
     .replace('Tuesday', 'Tis')
     .replace('Wednesday', 'Ons')
     .replace('Thursday', 'Tor')
-    .replace('Friday', 'Fre');
+    .replace('Friday', 'Fre')
   let dayAfterDayAftertomorrow = DateTime.now()
     .plus({ days: 3 })
     .toFormat('cccc dd/MM ')
@@ -45,7 +45,7 @@ function Datum() {
     .replace('Tuesday', 'Tis')
     .replace('Wednesday', 'Ons')
     .replace('Thursday', 'Tor')
-    .replace('Friday', 'Fre');
+    .replace('Friday', 'Fre')
 
   return (
     <div className={classes.circleContainer}>
@@ -79,6 +79,6 @@ function Datum() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default Datum;
+export default Date

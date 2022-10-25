@@ -1,7 +1,7 @@
-import React from "react";
-import classes from "./Matchinfo.module.css";
+import React from 'react'
+import classes from './GameInfo.module.css'
 
-function Matchinfo(props) {
+function GameInfo(props) {
   console.log(props)
   return (
     <div>
@@ -32,6 +32,6 @@ function Matchinfo(props) {
         </tbody>
       </table>
     </div>
-  );
+  )
 }
-export default Matchinfo;
+export default GameInfo

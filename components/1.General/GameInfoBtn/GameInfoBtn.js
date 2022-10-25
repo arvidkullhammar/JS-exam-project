@@ -1,13 +1,13 @@
 import React from 'react'
-import classes from './MatchinfoKnapp.module.css'
+import classes from './GameInfoBtn.module.css'
 import Link from 'next/link'
 
-function MatchinfoKnapp() {
+function GameInfoBtn() {
   return (
     <div className={classes.circle}>
       <Link
         href={{
-          pathname: `/{cupnamn}/matchinfo/{abbv-abbv}`,
+          pathname: `/{cupnamn}/GameInfo/{abbv-abbv}`,
         }}
         className={classes.textWrap}
       >
@@ -16,4 +16,4 @@ function MatchinfoKnapp() {
     </div>
   )
 }
-export default MatchinfoKnapp
+export default GameInfoBtn

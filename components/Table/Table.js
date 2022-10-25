@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import classes from './Tabell.module.css'
+import classes from './Table.module.css'
 import Tooltip from '@mui/material/Tooltip'
 
 function Tabell() {

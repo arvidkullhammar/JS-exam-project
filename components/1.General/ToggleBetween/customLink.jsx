@@ -2,13 +2,9 @@ import React, { ReactNode, Children, ReactElement, cloneElement } from 'react'
 import Link, { LinkProps } from 'next/link'
 import { useRouter } from 'next/router'
 
-interface Props extends LinkProps {
-  children: ReactNode
-}
-
-function CustomLink({ href, children, ...props }: Props) {
+function CustomLink({ href, children, ...props }) {
   const { asPath } = useRouter()
-  const child = Children.only(children) as ReactElement
+  const child = Children.only(children)
   const childClassName = child.props.className || ''
   const className = href === asPath ? `${childClassName} active` : childClassName
 

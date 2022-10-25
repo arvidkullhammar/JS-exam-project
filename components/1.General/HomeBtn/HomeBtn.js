@@ -1,11 +1,11 @@
 // import React from 'react'
 // import HomeIcon from '@mui/icons-material/Home'
 
-// const Hemknapp = () => {
+// const HomeBtn = () => {
 //   return (
 //     <div>
 //       <HomeIcon />
 //     </div>
 //   )
 // }
-// export default Hemknapp
+// export default HomeBtn

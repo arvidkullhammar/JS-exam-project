@@ -1,9 +1,9 @@
 /** @format */
 
-import React from 'react';
-import classes from '../Cupinfo/CupInfo.module.css';
+import React from 'react'
+import classes from '../TournamentInfo/TournamentInfo.module.css'
 
-function Cupinfo() {
+function TournamentInfo() {
   return (
     <main className={classes.cupInfoContainer}>
       <div className={classes.cupHeader}>Cup´header</div>
@@ -13,6 +13,6 @@ function Cupinfo() {
       <div className={classes.hittaHit}>Hitta hit</div>
       <div className={classes.viktigInfo}>viktig info</div>
     </main>
-  );
+  )
 }
-export default Cupinfo;
+export default Cupinfo

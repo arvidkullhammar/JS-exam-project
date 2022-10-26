@@ -5,12 +5,9 @@ export default function DeletePlayer(props) {
 const {id,parentStateCallback} = props
 
   const deletePlayer = async () => {
-/*     const newObj = {
-      id: id
-    } */
+
     await fetch("http://localhost:3000/api/players/delete", {
       method: "DELETE",
-      header: { "Content-Type": "application/json" },
       body: id,
     })
       .then((data) => console.log(data))

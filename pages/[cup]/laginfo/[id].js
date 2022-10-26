@@ -23,15 +23,18 @@ export default function TeamInfo(props) {
 
   //Remove roster when player is removed
   const removeCallback = (removeId) => {
+    console.log('removeid', removeId)
     let newPlayerArr = [...playerArr];
-    let removePlayerIndex = newPlayerArr.find((obj) => obj.id === removeId);
+    let removePlayerIndex = newPlayerArr.findIndex((obj) => obj.id === removeId);
     console.log(removePlayerIndex, 'remove index')
 
     if (removePlayerIndex > -1) {
-      newPlayerArr.slice(removePlayerIndex, 1);
+      console.log('if run')
+      newPlayerArr.splice(removePlayerIndex, 1);
     }
 
     setPlayerArr(newPlayerArr);
+    console.log('newplayerarr',newPlayerArr)
   };
 
   return (
@@ -97,8 +100,6 @@ export async function getServerSideProps({ params }) {
     teamRes.json(),
     playersRes.json(),
   ]);
-  console.log(players);
-  console.log(team);
   return {
     props: {
       id: team.id,

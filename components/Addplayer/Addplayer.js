@@ -20,26 +20,31 @@ export default function Addplayer(props) {
       .then((data) => console.log(data))
       .catch((e) => console.log("ERROR", e));
 
-    setName("Name");
-    setNumber(0);
+    setName("");
+    setNumber("");
     parentStateCallback(newObj);
   };
 
   return (
     <div>
       <input
+      maxLength={20}
+      minLength={4}
         className={classes.inputStyle}
         value={name}
         placeholder="För & Efternamn"
         onChange={(e) => setName(e.target.value)}
       />
-      <input
+      Tröjnummer: <select
         className={classes.inputStyle}
         value={number}
         placeholder="Tröjnummer"
         onChange={(e) => setNumber(e.target.value)}
-      />
-      {/*       <input value={team} onChange={(e) => setTeam(e.target.value)} /> */}
+      >
+        {[...Array(99)].map((x, i) =>
+    <option key={i + 1} value={i + 1}>{i + 1}</option>
+  )}
+        </select>
       <button onClick={() => addPlayer()}>Lägg till spelare</button>
     </div>
   );

@@ -7,11 +7,11 @@ export default async function handler(req, res) {
     return;
   } else {
     try {
-      const deleteId = JSON.parse(req.body.id);
-      console.log(deleteId)
+      const deleteId = req.body;
+      console.log('delete ID',deleteId)
       const deleteUser = await prisma.players.delete({
           where: {
-            id: deleteId,
+            id: Number(deleteId),
           },
       })
       res.status(201).send("Player deleted!");

@@ -2,16 +2,14 @@
 import React from 'react'
 import ToggleBetween from '../../components/1.General/ToggleBetween/ToggleBetween'
 import Date from '../../components/1.General/Date/Date'
-import Image from 'next/future/image'
 import Table from '../../components/Table/Table'
-import classes from '../../styles/GameSchedule.module.css'
-import headerImg from '../../public/images/header/header.jpg'
+import HeaderImg from '../../components/1.General/HeaderImg/HeaderImg'
 
 export default function tablePage(props) {
   const teams = props.teamId
   return (
     <>
-      <Image className={classes.heroImg} src={headerImg} alt="photo of leksand logo" width="50px" height="50px" />
+      <HeaderImg />
       <Date />
       <ToggleBetween />
       <Table teams={teams} />

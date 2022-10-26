@@ -3,14 +3,12 @@ import React from 'react'
 import GameCard from '../../components/GameCard/GameCard'
 import ToggleBetween from '../../components/1.General/ToggleBetween/ToggleBetween'
 import Date from '../../components/1.General/Date/Date'
-import Image from 'next/future/image'
-import headerImg from '../../public/images/header/header.jpg'
-import classes from '../../styles/GameSchedule.module.css'
+import HeaderImg from '../../components/1.General/HeaderImg/HeaderImg'
 
 export default function GameSchedulePage(props) {
   return (
     <>
-      <Image className={classes.heroImg} src={headerImg} alt="photo of leksand logo!" width="50px" height="50px" />
+      <HeaderImg />
       <Date />
       <ToggleBetween />
       <GameCard team1={props.teamId[0]} team2={props.teamId[1]} />

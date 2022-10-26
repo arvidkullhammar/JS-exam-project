@@ -36,7 +36,7 @@
   text-align: center;
   font-size: 16px;
   margin: 4px 2px;
-  transition: 0.5s;
+  transition: 0.4s linear;
   cursor: pointer;
   border-radius: 6px;
 }

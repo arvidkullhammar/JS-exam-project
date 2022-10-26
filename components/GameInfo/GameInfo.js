@@ -1,12 +1,15 @@
 /** @format */
 
-import React from 'react';
-import classes from './GameInfo.module.css';
+import React from 'react'
+import classes from './GameInfo.module.css'
+import HomeBtn from '../1.General/HomeBtn/HomeBtn'
 
 function GameInfo(props) {
-  console.log(props);
+  console.log(props)
   return (
     <div className={classes.container}>
+      <HomeBtn />
+
       <div className={classes.match}>
         <div className={classes.matchHeader}>
           <div className={classes.matchStatus}>Live</div>
@@ -32,9 +35,7 @@ function GameInfo(props) {
               <div className={classes.matchScore}>
                 <span className={`${classes.matchScoreNumber} `}>13</span>
                 <span className={classes.matchScoreDivider}>:</span>
-                <span className={`${classes.matchScoreNumber} ${classes.matchScoreNumberLeading} `}>
-                  37
-                </span>
+                <span className={`${classes.matchScoreNumber} ${classes.matchScoreNumberLeading} `}>37</span>
               </div>
               <div className={classes.matchTimeLapsed}>92'</div>
               <div className={classes.matchReferee}>
@@ -53,7 +54,7 @@ function GameInfo(props) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default GameInfo;
+export default GameInfo

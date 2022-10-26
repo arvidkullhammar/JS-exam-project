@@ -1,18 +1,19 @@
 .btnStyling {
   position: absolute;
   padding: 8px;
-  background: white;
-  color: black;
+  background: var(--backgroundWhite);
+  color: var(--primary);
   margin: 20px;
   border-radius: 6px;
   font-weight: bold;
   transition: 0.4s linear;
   cursor: pointer;
+  z-index: 1;
 }
 
 .btnStyling:hover {
-  background-color: #000000;
-  color: white;
+  background-color: var(--primary);
+  color: var(--secondary);
   transition: 0.4s linear;
   cursor: pointer;
 }

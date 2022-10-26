@@ -8,7 +8,6 @@ export default async function handler(req, res) {
   } else {
     try {
       const deleteId = req.body;
-      console.log('delete ID',deleteId)
       const deleteUser = await prisma.players.delete({
           where: {
             id: Number(deleteId),

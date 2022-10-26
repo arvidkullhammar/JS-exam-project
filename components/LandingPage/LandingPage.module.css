@@ -5,6 +5,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color: #3e8e41;
 }
 
 .containerImg {
@@ -14,18 +15,21 @@
   top: 0px;
   object-fit: cover;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
+  opacity: 0.6;
 }
 
 .title {
   font-size: 50px;
   text-align: center;
   grid-area: 2 / 3 / 3 / 4;
+  z-index: 1;
 }
 
 .visit {
   font-size: 1.3rem;
   font-weight: bold;
+  z-index: 1;
 }
 
 .btn {
@@ -39,6 +43,7 @@
   transition: 0.4s linear;
   cursor: pointer;
   border-radius: 6px;
+  z-index: 1;
 }
 
 .btn:hover {

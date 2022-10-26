@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './LandingPage.module.css'
 import Image from 'next/future/image'
 import Link from 'next/link'
-import LandingImg from '../../Images/header/audience-gffb00a2c7_1920.jpg'
+import LandingImg from '../../public/images/header/header.jpg'
 
 function LandingPage() {
   return (

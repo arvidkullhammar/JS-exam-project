@@ -4,7 +4,7 @@ import GameCard from '../../components/GameCard/GameCard'
 import ToggleBetween from '../../components/1.General/ToggleBetween/ToggleBetween'
 import Date from '../../components/1.General/Date/Date'
 import Image from 'next/future/image'
-import headerImg from '../.././Images/header/audience-gffb00a2c7_1920.jpg'
+import headerImg from '../../public/images/header/header.jpg'
 import classes from '../../styles/GameSchedule.module.css'
 
 export default function GameSchedulePage(props) {

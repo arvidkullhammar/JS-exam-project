@@ -34,17 +34,31 @@ export default function TeamInfo(props) {
 
   return (
     <main className={classes.lagInfoContainer}>
-      <header className={classes.headerLogo}>
+      <header
+        className={classes.headerLogo}
+        style={{
+          backgroundColor: `rgba(${colors.secondary}, 0.7)`,
+        }}
+      >
         {logo && <Image src={logo} alt="klubblogo" width={200} height={200} />}
-        <h1>{props.teamName}</h1>
       </header>
-      <div className={classes.kontaktInfo}>
+
+      <div
+        className={classes.kontaktInfo}
+        style={{
+          borderTop: `8px solid rgba(${colors.secondary}, 0.7)`,
+        }}
+      >
         <h2>Kontaktinfo</h2>
         <p>{props.admin}</p>
         <p>{props.email}</p>
       </div>
-      <div className={classes.spelarTrupp}>
-        <h2 className={classes.spelarTruppText}>Spelartrupp</h2>
+      <div
+        className={classes.spelarTrupp}
+        style={{
+          borderTop: `8px solid rgba(${colors.secondary}, 0.7)`,
+        }}
+      >
         <div>
           {playerArr.map((player) => (
             <div className={classes.spelarDiv} key={player.id}>
@@ -63,11 +77,21 @@ export default function TeamInfo(props) {
         </div>
       </div>
 
-      <div className={classes.omkladningsRum}>
+      <div
+        className={classes.omkladningsRum}
+        style={{
+          borderTop: `8px solid rgba(${colors.secondary}, 0.7)`,
+        }}
+      >
         <h2>Spelarverktyg</h2>
         <Addplayer team={props.id} parentStateCallback={addCallback} />
       </div>
-      <div className={classes.hittaHit}>
+      <div
+        className={classes.hittaHit}
+        style={{
+          borderTop: `8px solid rgba(${colors.secondary}, 0.7)`,
+        }}
+      >
         <h2>Hitta hit</h2>
         <p>Santa Barbara Street 34</p>
         <p>Saint Row aveny 4</p>

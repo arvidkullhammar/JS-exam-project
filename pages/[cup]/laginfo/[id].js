@@ -23,7 +23,6 @@ export default function TeamInfo(props) {
 
   //Remove roster when player is removed
   const removeCallback = (removeId) => {
-    console.log('removeid', removeId)
     let newPlayerArr = [...playerArr];
     let removePlayerIndex = newPlayerArr.findIndex((obj) => obj.id === removeId);
 

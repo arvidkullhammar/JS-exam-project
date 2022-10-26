@@ -1,11 +1,11 @@
 /** @format */
 
 .rightRadius {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  color: black;
-  background-color: white;
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  border-right: 2px solid var(--primary);
+  color: var(--primary);
+  background-color: var(--backgroundWhite);
   border-radius: 0px 6px 6px 0px;
   width: 33.33%;
   text-align: center;
@@ -13,21 +13,21 @@
 }
 
 .squared {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  color: black;
-  background-color: white;
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+  background-color: var(--backgroundWhite);
   width: 33.33%;
   text-align: center;
   padding: 4px;
 }
 
 .leftRadius {
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-  color: black;
-  background-color: white;
+  border-top: 2px solid var(--primary);
+  border-left: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+  background-color: var(--backgroundWhite);
   width: 33.33%;
   border-radius: 6px 0px 0px 6px;
   text-align: center;
@@ -50,22 +50,22 @@
 }
 
 .leftRadius:hover {
-  background-color: #000000;
-  color: white;
+  background-color: var(--primary);
+  color: var(--secondary);
   transition: 0.4s linear;
   cursor: pointer;
 }
 
 .squared:hover {
-  background-color: #000000;
-  color: white;
+  background-color: var(--primary);
+  color: var(--backgroundWhite);
   transition: 0.4s linear;
   cursor: pointer;
 }
 
 .rightRadius:hover {
-  background-color: #000000;
-  color: white;
+  background-color: var(--primary);
+  color: var(--backgroundWhite);
   transition: 0.4s linear;
   cursor: pointer;
 }

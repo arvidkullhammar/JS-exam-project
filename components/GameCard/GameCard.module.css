@@ -6,7 +6,6 @@
   grid-template-rows: repeat(8, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  color: black;
   grid-column-gap: 5px;
   grid-row-gap: 10px;
   margin: 10px;
@@ -14,14 +13,15 @@
   box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
   text-indent: 10px;
   padding-top: 10px;
+  color: var(--primary);
   padding-bottom: 10px;
   transition: 0.4s linear;
   cursor: pointer;
 }
 
 .container:hover {
-  background-color: #000000;
-  color: white;
+  background-color: #71c562d9;
+  color: var(--backgroundWhite);
   transition: 0.4s linear;
   cursor: pointer;
 }
@@ -34,14 +34,14 @@
   grid-area: 1 / 4 / 3 / 7;
   border-radius: 50%;
   display: inline-block;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--secondary);
 
   /* text styling */
 
   font-size: 13px;
   width: 20px;
   height: 20px;
-  color: #fff;
+
   text-align: center;
   position: relative;
   color: rgba(0, 0, 0, 0.2);
@@ -54,6 +54,7 @@
   left: 50%;
   transform: translate(-95%, -50%);
   font-style: italic;
+  color: var(--backgroundWhite);
 }
 
 .textWrap span {
@@ -61,7 +62,6 @@
 }
 
 .circle span:nth-child(2) {
-  color: red;
   font-size: 22px;
 }
 
@@ -75,7 +75,7 @@
 
 .div5 {
   grid-area: 5 / 4 / 7 / 7;
-  color: #348c31;
+
   font-weight: bold;
 }
 
@@ -85,8 +85,8 @@
 
 .div7 {
   grid-area: 7 / 4 / 9 / 7;
-  color: white;
-  background-color: #348c31;
+  color: var(--backgroundWhite);
+  background-color: var(--primary);
   border-radius: 6px;
   text-align: center;
   width: 150px;

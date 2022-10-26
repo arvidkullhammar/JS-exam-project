@@ -1,7 +1,7 @@
 /** @format */
 
 .container {
-  color: black;
+  color: var(--primary);
   margin: 10px;
   border-radius: 6px;
   box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
@@ -12,9 +12,9 @@
 
 .tabellStyling {
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--backgroundWhite);
   border-collapse: collapse;
-  color: #000000;
+  color: var(--primary);
   text-align: center;
   border-radius: 6px;
 }
@@ -31,11 +31,11 @@ table.tabellStyling {
 
 table.tabellStyling td,
 table.tabellStyling th {
-  padding: 3px;
+  padding: 8px;
 }
 
 table.tabellStyling thead {
-  background-color: #000000;
+  background-color: var(--primary);
   color: white;
   border-radius: 6px;
 }

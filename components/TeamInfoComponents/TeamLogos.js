@@ -1,13 +1,13 @@
 /** @format */
 
-import React from "react";
-import Image from "next/future/image";
-import aik from "../../Images/mocklogos/klubb_aik.png";
-import kik from "../../Images/mocklogos/kik_logga.png";
-import almtuna from "../../Images/mocklogos/klubb_almtuna.png";
-import bik from "../../Images/mocklogos/klubb_bik.png";
-import loven from "../../Images/mocklogos/klubb_loven.png";
-import modo from "../../Images/mocklogos/mini_modo.png";
+import React from 'react';
+import Image from 'next/future/image';
+import aik from '../../public/images/mocklogos/klubb_aik.png';
+import kik from '../../public/images/mocklogos/kik_logga.png';
+import almtuna from '../../public/images/mocklogos/klubb_almtuna.png';
+import bik from '../../public/images/mocklogos/klubb_bik.png';
+import loven from '../../public/images/mocklogos/klubb_loven.png';
+import modo from '../../public/images/mocklogos/mini_modo.png';
 
 export default function Klubbloggor() {
   const randomLogo = () => {

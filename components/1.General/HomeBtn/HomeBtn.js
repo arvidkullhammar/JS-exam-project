@@ -1,11 +1,7 @@
-// import React from 'react'
-// import HomeIcon from '@mui/icons-material/Home'
+import React from 'react'
+import classes from './HomeBtn.module.css'
 
-// const HomeBtn = () => {
-//   return (
-//     <div>
-//       <HomeIcon />
-//     </div>
-//   )
-// }
-// export default HomeBtn
+const HomeBtn = () => {
+  return <div className={classes.btnStyling}>Tillbaka</div>
+}
+export default HomeBtn

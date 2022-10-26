@@ -1,0 +1,18 @@
+.btnStyling {
+  position: absolute;
+  padding: 8px;
+  background: white;
+  color: black;
+  margin: 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+
+.btnStyling:hover {
+  background-color: #000000;
+  color: white;
+  transition: 0.4s linear;
+  cursor: pointer;
+}

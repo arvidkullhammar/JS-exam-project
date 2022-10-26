@@ -7,8 +7,8 @@
   margin: 1px 0;
   box-sizing: border-box;
   border: 1px solid #ccc;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  transition: 0.4s linear;
+  transition: 0.4s linear;
   outline: none;
   border-radius: 6px;
 }

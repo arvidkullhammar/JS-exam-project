@@ -1,19 +1,20 @@
 /** @format */
-import Image from "next/future/image";
-import React, { useEffect } from "react";
-import classes from "../../../components/TeamInfoComponents/TeamInfo.module.css";
-import TeamLogos from "../../../components/TeamInfoComponents/TeamLogos";
-import jersey from "../../../Images/lagtröja.png";
-import Addplayer from "../../../components/Addplayer/Addplayer";
-import { useState } from "react";
-import Router from "next/router";
-import DeletePlayer from "../../../components/Deleteplayer/Deleteplayer";
+import React, { useEffect, useState } from 'react';
+import Image from 'next/future/image';
+import Router from 'next/router';
+import classes from 'components/TeamInfoComponents/TeamInfo.module.css';
+import TeamLogos from 'components/TeamInfoComponents/TeamLogos';
+import jersey from 'public/images/lagtröja.png';
+import Addplayer from 'components/Addplayer/Addplayer';
+import DeletePlayer from 'components/Deleteplayer/Deleteplayer';
+import useLogo from 'hooks/useLogo';
 
 export default function TeamInfo(props) {
+  const { colors, logo } = useLogo();
   //Update roster when player is added
   const [playerArr, setPlayerArr] = useState(props.players);
   useEffect(() => {
-    console.log("updated player roster");
+    console.log('updated player roster');
   }, [playerArr]);
   const addCallback = (obj) => {
     let newPlayerArr = [...playerArr];
@@ -37,10 +38,18 @@ export default function TeamInfo(props) {
     console.log('newplayerarr',newPlayerArr)
   };
 
+  console.log('colors', colors);
+
   return (
-    <main className={classes.lagInfoContainer}>
+    <main
+      className={classes.lagInfoContainer}
+      style={{
+        backgroundColor: `rgb(${colors.primary})`,
+        border: ` 5px solid rgb(${colors.secondary})`,
+      }}
+    >
       <header className={classes.headerLogo}>
-        <TeamLogos />
+        {logo && <Image src={logo} alt="klubblogo" width={200} height={200} />}
         <h1>{props.teamName}</h1>
       </header>
       <div className={classes.kontaktInfo}>
@@ -53,7 +62,9 @@ export default function TeamInfo(props) {
         <div>
           {playerArr.map((player) => (
             <div className={classes.spelarDiv} key={player.id}>
-              <p className={classes.spelare}>{player.name}</p>
+              <p className={classes.spelare}>
+                {player.name.charAt(0) + '.' + player.name.substring(player.name.indexOf(' '))}
+              </p>
               <div className={classes.jerseyContainer}>
                 <Image
                   src={jersey}
@@ -66,7 +77,7 @@ export default function TeamInfo(props) {
                   <b>{player.number}</b>
                 </p>
               </div>
-              <DeletePlayer id ={player.id} parentStateCallback={removeCallback} />
+              <DeletePlayer id={player.id} parentStateCallback={removeCallback} />
             </div>
           ))}
         </div>

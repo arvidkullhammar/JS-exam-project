@@ -1,30 +1,34 @@
-/* .tabellStyling {
-  width: 100%;
-  background-color: #ffffff;
-  border-collapse: collapse;
-  color: #000000;
-  text-align: center;
-}
+/**
+ * /* .tabellStyling {
+ *   width: 100%;
+ *   background-color: #ffffff;
+ *   border-collapse: collapse;
+ *   color: #000000;
+ *   text-align: center;
+ * }
+ * 
+ * .textCenter {
+ *   text-align: center;
+ * }
+ * 
+ * table.tabellStyling {
+ *   width: 100%;
+ *   border-collapse: collapse;
+ * }
+ * 
+ * table.tabellStyling td,
+ * table.tabellStyling th {
+ *   padding: 3px;
+ * }
+ * 
+ * table.tabellStyling thead {
+ *   background-color: #ffcc00;
+ * }
+ *
+ * @format
+ */
 
-.textCenter {
-  text-align: center;
-}
-
-table.tabellStyling {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table.tabellStyling td,
-table.tabellStyling th {
-  padding: 3px;
-}
-
-table.tabellStyling thead {
-  background-color: #ffcc00;
-} */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 .button,
 .input,
@@ -42,14 +46,14 @@ table.tabellStyling thead {
 }
 
 .body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-secondary);
+  color: #1c2a38;
+  background-color: #f3f5f9;
 }
 
 .match {
-  background-color: var(--color-bg-primary);
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   min-width: 600px;
@@ -66,8 +70,8 @@ table.tabellStyling thead {
 }
 
 .matchStatus {
-  background-color: var(--color-bg-alert);
-  color: var(--color-text-alert);
+  background-color: rgba(255, 0, 0, 0.2);
+  color: red;
   padding: 8px 12px;
   border-radius: 6px;
   font-weight: 600;
@@ -79,7 +83,7 @@ table.tabellStyling thead {
   color: red;
 }
 .matchStatus:before {
-  content: "";
+  content: '';
   display: block;
   width: 6px;
   height: 6px;
@@ -126,8 +130,8 @@ table.tabellStyling thead {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: var(--color-bg-primary);
-  box-shadow: 0 4px 4px 0 rgba(48, 48, 48, 0.15), 0 0 0 15px var(--color-bg-secondary);
+  background-color: #fff;
+  box-shadow: 0 4px 4px 0 rgba(48, 48, 48, 0.15), 0 0 0 15px #f3f5f9;
 }
 .teamLogo img {
   width: 50px;
@@ -153,7 +157,7 @@ table.tabellStyling thead {
 }
 .matchDate strong,
 .matchReferee strong {
-  color: var(--color-text-primary);
+  color: #8a8f98;
 }
 
 .matchScore {
@@ -167,15 +171,15 @@ table.tabellStyling thead {
   font-weight: 600;
   line-height: 1;
 }
-.matchScoreSumberLeading {
-  color: var(--color-theme-primary);
+.matchScoreNumberLeading {
+  color: #623ce6;
 }
 
 .matchScoreSivider {
   font-size: 28px;
   font-weight: 700;
   line-height: 1;
-  color: var(--color-text-icon);
+  color: #dbdade;
   margin-left: 10px;
   margin-right: 10px;
 }

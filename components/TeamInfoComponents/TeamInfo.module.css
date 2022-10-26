@@ -52,16 +52,20 @@
   margin: 5px;
   /* background-color: #348c31; */
   border-radius: 6px;
+  flex-wrap: nowrap;
 }
 
 .spelare {
   width: 50%;
-  text-indent: 10px;
+  text-indent: 5px;
+  flex-wrap: nowrap;
+  display: flex;
+  font-size: 12px;
 }
 
 .jersey {
   max-height: 35px;
-  max-width: 50px;
+  max-width: 35px;
   grid-column: 1;
   grid-row: 1;
 }
@@ -72,6 +76,7 @@
   z-index: 1;
   position: relative;
   left: -2.5px;
+  font-size: 12px;
 }
 
 .jerseyContainer {

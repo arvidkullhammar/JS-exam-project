@@ -1,19 +1,19 @@
 /** @format */
-import Image from "next/future/image";
-import React, { useEffect } from "react";
-import classes from "../../../components/TeamInfoComponents/TeamInfo.module.css";
-import TeamLogos from "../../../components/TeamInfoComponents/TeamLogos";
-import jersey from "../../../Images/lagtröja.png";
-import Addplayer from "../../../components/Addplayer/Addplayer";
-import { useState } from "react";
-import Router from "next/router";
-import DeletePlayer from "../../../components/Deleteplayer/Deleteplayer";
+import Image from 'next/future/image';
+import React, { useEffect } from 'react';
+import classes from '../../../components/TeamInfoComponents/TeamInfo.module.css';
+import TeamLogos from '../../../components/TeamInfoComponents/TeamLogos';
+import jersey from '../../../Images/lagtröja.png';
+import Addplayer from '../../../components/Addplayer/Addplayer';
+import { useState } from 'react';
+import Router from 'next/router';
+import DeletePlayer from '../../../components/Deleteplayer/Deleteplayer';
 
 export default function TeamInfo(props) {
   //Update roster when player is added
   const [playerArr, setPlayerArr] = useState(props.players);
   useEffect(() => {
-    console.log("updated player roster");
+    console.log('updated player roster');
   }, [playerArr]);
   const addCallback = (obj) => {
     let newPlayerArr = [...playerArr];
@@ -25,7 +25,7 @@ export default function TeamInfo(props) {
   const removeCallback = (removeId) => {
     let newPlayerArr = [...playerArr];
     let removePlayerIndex = newPlayerArr.find((obj) => obj.id === removeId);
-    console.log(removePlayerIndex, 'remove index')
+    console.log(removePlayerIndex, 'remove index');
 
     if (removePlayerIndex > -1) {
       newPlayerArr.slice(removePlayerIndex, 1);
@@ -50,7 +50,9 @@ export default function TeamInfo(props) {
         <div>
           {playerArr.map((player) => (
             <div className={classes.spelarDiv} key={player.id}>
-              <p className={classes.spelare}>{player.name}</p>
+              <p className={classes.spelare}>
+                {player.name.charAt(0) + '.' + player.name.substring(player.name.indexOf(' '))}
+              </p>
               <div className={classes.jerseyContainer}>
                 <Image
                   src={jersey}
@@ -63,7 +65,7 @@ export default function TeamInfo(props) {
                   <b>{player.number}</b>
                 </p>
               </div>
-              <DeletePlayer id ={player.id} parentStateCallback={removeCallback} />
+              <DeletePlayer id={player.id} parentStateCallback={removeCallback} />
             </div>
           ))}
         </div>
@@ -93,10 +95,7 @@ export async function getServerSideProps({ params }) {
     fetch(`http://localhost:3000/api/teams/${params.id}`),
     fetch(`http://localhost:3000/api/players/${params.id}`),
   ]);
-  const [team, players] = await Promise.all([
-    teamRes.json(),
-    playersRes.json(),
-  ]);
+  const [team, players] = await Promise.all([teamRes.json(), playersRes.json()]);
   console.log(players);
   console.log(team);
   return {

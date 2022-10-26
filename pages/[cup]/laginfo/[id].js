@@ -13,9 +13,7 @@ export default function TeamInfo(props) {
   const { colors, logo } = useLogo();
   //Update roster when player is added
   const [playerArr, setPlayerArr] = useState(props.players);
-  useEffect(() => {
-    console.log("updated player roster");
-  }, [playerArr]);
+  useEffect(() => {}, [playerArr]);
   const addCallback = (obj) => {
     let newPlayerArr = [...playerArr];
     newPlayerArr.push(obj);
@@ -24,21 +22,15 @@ export default function TeamInfo(props) {
 
   //Remove roster when player is removed
   const removeCallback = (removeId) => {
-    console.log("removeid", removeId);
     let newPlayerArr = [...playerArr];
     let removePlayerIndex = newPlayerArr.findIndex((obj) => obj.id === removeId);
-    console.log(removePlayerIndex, "remove index");
 
     if (removePlayerIndex > -1) {
-      console.log("if run");
       newPlayerArr.splice(removePlayerIndex, 1);
     }
 
     setPlayerArr(newPlayerArr);
-    console.log("newplayerarr", newPlayerArr);
   };
-
-  console.log("colors", colors);
 
   return (
     <main className={classes.lagInfoContainer}>

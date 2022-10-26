@@ -1,15 +1,16 @@
 /** @format */
+import React, { useEffect, useState } from 'react';
 import Image from 'next/future/image';
-import React, { useEffect } from 'react';
-import classes from '../../../components/TeamInfoComponents/TeamInfo.module.css';
-import TeamLogos from '../../../components/TeamInfoComponents/TeamLogos';
-import jersey from '../../../public/images/lagtröja.png';
-import Addplayer from '../../../components/Addplayer/Addplayer';
-import { useState } from 'react';
 import Router from 'next/router';
-import DeletePlayer from '../../../components/Deleteplayer/Deleteplayer';
+import classes from 'components/TeamInfoComponents/TeamInfo.module.css';
+import TeamLogos from 'components/TeamInfoComponents/TeamLogos';
+import jersey from 'public/images/lagtröja.png';
+import Addplayer from 'components/Addplayer/Addplayer';
+import DeletePlayer from 'components/Deleteplayer/Deleteplayer';
+import useLogo from 'hooks/useLogo';
 
 export default function TeamInfo(props) {
+  const { colors, logo } = useLogo();
   //Update roster when player is added
   const [playerArr, setPlayerArr] = useState(props.players);
   useEffect(() => {
@@ -34,10 +35,18 @@ export default function TeamInfo(props) {
     setPlayerArr(newPlayerArr);
   };
 
+  console.log('colors', colors);
+
   return (
-    <main className={classes.lagInfoContainer}>
+    <main
+      className={classes.lagInfoContainer}
+      style={{
+        backgroundColor: `rgb(${colors.primary})`,
+        border: ` 5px solid rgb(${colors.secondary})`,
+      }}
+    >
       <header className={classes.headerLogo}>
-        <TeamLogos />
+        {logo && <Image src={logo} alt="klubblogo" width={200} height={200} />}
         <h1>{props.teamName}</h1>
       </header>
       <div className={classes.kontaktInfo}>

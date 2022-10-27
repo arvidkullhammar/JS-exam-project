@@ -52,20 +52,20 @@
 .leftRadius:hover {
   background-color: #71c562d9;
   color: var(--secondary);
-  transition: 0.4s linear;
+  transition: 0.2s linear;
   cursor: pointer;
 }
 
 .squared:hover {
   background-color: #71c562d9;
   color: var(--backgroundWhite);
-  transition: 0.4s linear;
+  transition: 0.2s linear;
   cursor: pointer;
 }
 
 .rightRadius:hover {
   background-color: #71c562d9;
   color: var(--backgroundWhite);
-  transition: 0.4s linear;
+  transition: 0.2s linear;
   cursor: pointer;
 }

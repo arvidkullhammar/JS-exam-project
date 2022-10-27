@@ -15,14 +15,14 @@
   padding-top: 10px;
   color: var(--primary);
   padding-bottom: 10px;
-  transition: 0.4s linear;
+  transition: 0.2s linear;
   cursor: pointer;
 }
 
 .container:hover {
   background-color: #71c562d9;
   color: var(--backgroundWhite);
-  transition: 0.4s linear;
+  transition: 0.2s linear;
   cursor: pointer;
 }
 

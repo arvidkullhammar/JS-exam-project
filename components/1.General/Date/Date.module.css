@@ -25,7 +25,7 @@
 }
 
 .circle:hover {
-  background-color: var(--primary);
+  background-color: #71c562d9;
   color: var(--secondary);
   transition: 0.4s linear;
   cursor: pointer;

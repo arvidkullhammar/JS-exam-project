@@ -10,6 +10,13 @@
   width: 100%;
 }
 
+.spelarDiv:hover {
+  background-color: #71c562d9;
+  color: var(--secondary);
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
 .headerLogo {
   grid-area: 1 / 1 / 3 / 3;
   background-color: #fff;

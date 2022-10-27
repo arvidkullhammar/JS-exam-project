@@ -58,7 +58,7 @@ function GameInfo(props) {
                 </div>
 
                 <div className={classes.matchReferee}>
-                  Domare: <strong>Anders Borg</strong>
+                  Domare: <strong>Niclas Pahlfer</strong>
                 </div>
               </div>
             </div>

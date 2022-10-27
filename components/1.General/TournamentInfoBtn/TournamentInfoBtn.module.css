@@ -23,6 +23,3 @@
 .textWrap span {
   display: block;
 }
-.circle span:nth-child(2) {
-  color: red;
-}

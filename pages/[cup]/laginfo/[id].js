@@ -8,6 +8,7 @@ import jersey from 'public/images/lagtröja.png'
 import Addplayer from 'components/Addplayer/Addplayer'
 import DeletePlayer from 'components/Deleteplayer/Deleteplayer'
 import useLogo from 'hooks/useLogo'
+import HomeBtn from 'components/1.General/HomeBtn/HomeBtn'
 
 export default function TeamInfo(props) {
   const { colors, logo } = useLogo()
@@ -34,6 +35,7 @@ export default function TeamInfo(props) {
 
   return (
     <main className={classes.lagInfoContainer}>
+      <HomeBtn />
       <header
         className={classes.headerLogo}
         style={{

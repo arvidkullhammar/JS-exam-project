@@ -3,8 +3,9 @@
   border-style: none;
   background-color: white;
   width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
 
-  margin: 1px 0;
   box-sizing: border-box;
   border: 1px solid #ccc;
   transition: 0.2s linear;
@@ -15,4 +16,23 @@
 
 .inputStyle:focus {
   border: 1px solid #555;
+}
+
+.addPlayerBtn {
+  background-color: var(--backgroundWhite); /* Green */
+  color: var(--primaryColor);
+  border: none;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+
+.addPlayerBtn:hover {
+  background-color: #71c562d9;
+  color: var(--backgroundWhite);
+  transition: 0.2s linear;
+  cursor: pointer;
 }

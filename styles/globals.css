@@ -25,6 +25,13 @@ h5,
 h6 {
   font-family: 'poppins', sans-serif;
   color: var(--primary);
+  font-size: large;
+}
+
+p {
+  font-family: 'lato', sans-serif;
+  color: var(--primary);
+  font-size: small;
 }
 
 a {

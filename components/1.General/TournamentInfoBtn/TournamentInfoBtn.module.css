@@ -3,7 +3,6 @@
   display: inline-block;
   margin-right: 0px;
   /* text styling */
-  font-size: 10px;
   width: 15px;
   height: 15px;
   color: black;
@@ -26,5 +25,4 @@
 }
 .circle span:nth-child(2) {
   color: red;
-  font-size: 22px;
 }

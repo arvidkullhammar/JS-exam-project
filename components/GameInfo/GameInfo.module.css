@@ -45,7 +45,6 @@
   padding: 8px 12px;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 14px;
   display: flex;
   align-items: center;
   line-height: 1;
@@ -110,7 +109,6 @@
 .teamName {
   text-align: center;
   margin-top: 24px;
-  font-size: 20px;
   font-weight: 600;
 }
 
@@ -127,7 +125,6 @@
 
 .matchDate,
 .matchReferee {
-  font-size: 14px;
   color: var(--color-text-secondary);
 }
 .matchDate strong,
@@ -142,7 +139,6 @@
 }
 
 .matchScoreNumber {
-  font-size: 48px;
   font-weight: 600;
   line-height: 1;
 }
@@ -151,7 +147,6 @@
 }
 
 .matchScoreSivider {
-  font-size: 28px;
   font-weight: 700;
   line-height: 1;
   color: #dbdade;
@@ -161,7 +156,6 @@
 
 .matchTimeLapsed {
   color: #df9443;
-  font-size: 14px;
   font-weight: 600;
   margin-top: 8px;
 }

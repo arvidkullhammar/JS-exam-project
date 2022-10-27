@@ -13,7 +13,6 @@
   display: inline-block;
   margin-right: 20px;
   /* text styling */
-  font-size: 20px;
   width: 70px;
   height: 70px;
   color: var(--primary);
@@ -36,13 +35,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 15px;
 }
 .textWrap span {
   display: block;
 }
 .circle span:nth-child(2) {
   color: red;
-
-  font-size: 10px;
 }

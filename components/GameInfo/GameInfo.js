@@ -1,17 +1,17 @@
 /** @format */
 
-import React from 'react'
-import classes from './GameInfo.module.css'
-import HeaderImg from 'components/1.General/HeaderImg/HeaderImg'
-import Date from 'components/1.General/Date/Date'
-import HomeBtn from 'components/1.General/HomeBtn/HomeBtn'
-import Link from 'next/link'
-import useLogo from 'hooks/useLogo'
-import Image from 'next/future/image'
+import React from 'react';
+import classes from './GameInfo.module.css';
+import HeaderImg from 'components/1.General/HeaderImg/HeaderImg';
+import Date from 'components/1.General/Date/Date';
+import HomeBtn from 'components/1.General/HomeBtn/HomeBtn';
+import Link from 'next/link';
+import useLogo from 'hooks/useLogo';
+import Image from 'next/future/image';
 
 function GameInfo(props) {
-  console.log(props)
-  const { colors, logo } = useLogo()
+  console.log(props.teamTwo.id);
+  const { colors, logo } = useLogo();
   return (
     <div>
       <HomeBtn />
@@ -26,12 +26,14 @@ function GameInfo(props) {
           <div className={classes.matchContent}>
             <div className={classes.column}>
               <div className={`${classes.team} ${classes['team--home']}`}>
-                <div className={classes.teamLogo}>{logo && <Image src={logo} alt="Team logo" height="10px" width="10px" />}</div>
+                <div className={classes.teamLogo}>
+                  {logo && <Image src={logo} alt="Team logo" height="10px" width="10px" />}
+                </div>
 
                 <div>
                   <Link
                     href={{
-                      pathname: `/{cupnamn}/`,
+                      pathname: `/orncupen/laginfo/${props.teamOne.id}`,
                     }}
                     className={classes.textWrap}
                   >
@@ -48,7 +50,11 @@ function GameInfo(props) {
                 <div className={classes.matchScore}>
                   <span className={`${classes.matchScoreNumber} `}>13</span>
                   <span className={classes.matchScoreDivider}>:</span>
-                  <span className={`${classes.matchScoreNumber} ${classes.matchScoreNumberLeading} `}>37</span>
+                  <span
+                    className={`${classes.matchScoreNumber} ${classes.matchScoreNumberLeading} `}
+                  >
+                    37
+                  </span>
                 </div>
                 <div className={classes.matchTimeLapsed}>92'</div>
                 <div className={classes.matchReferee}>
@@ -58,12 +64,14 @@ function GameInfo(props) {
             </div>
             <div className={classes.column}>
               <div className={`${classes.team} ${classes['team--away']}`}>
-                <div className={classes.teamLogo}>{logo && <Image src={logo} alt="Team logo" height="10px" width="10px" />}</div>
+                <div className={classes.teamLogo}>
+                  {logo && <Image src={logo} alt="Team logo" height="10px" width="10px" />}
+                </div>
 
                 <div>
                   <Link
                     href={{
-                      pathname: `/{cupnamn}/laginfo/{teamTwo.name}`,
+                      pathname: `/orncupen/laginfo/${props.teamTwo.id}`,
                     }}
                     className={classes.textWrap}
                   >
@@ -76,7 +84,7 @@ function GameInfo(props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default GameInfo
+export default GameInfo;

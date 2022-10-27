@@ -90,7 +90,7 @@
 .kontaktInfo {
   grid-area: 3 / 1 / 5 / 2;
   background-color: #fff;
-  box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.2);
+  box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
   font-size: 15px;
   border-radius: 0px 0px 10px 10px;
   color: black;

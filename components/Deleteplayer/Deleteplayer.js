@@ -1,26 +1,27 @@
 /** @format */
 
-import React, { useState } from 'react';
-import classes from '../Addplayer/Addplayer.module.css';
+import React, { useState } from 'react'
+import classes from '../Addplayer/Addplayer.module.css'
 
 export default function DeletePlayer(props) {
-  const { id, parentStateCallback } = props;
+  const { id, parentStateCallback } = props
 
   const deletePlayer = async () => {
-
-    await fetch("http://localhost:3000/api/players/delete", {
-      method: "DELETE",
+    await fetch('http://localhost:3000/api/players/delete', {
+      method: 'DELETE',
       body: id,
     })
       .then((data) => console.log(data))
-      .catch((e) => console.log('ERROR', e));
-    console.log(id);
-    parentStateCallback(id);
-  };
+      .catch((e) => console.log('ERROR', e))
+    console.log(id)
+    parentStateCallback(id)
+  }
 
   return (
-    <div>
-      <div onClick={(id) => deletePlayer()}>x</div>
+    <div className={classes.deleteBtn}>
+      <div className={classes.deleteBtnText} onClick={(id) => deletePlayer()}>
+        Ta bort
+      </div>
     </div>
-  );
+  )
 }

@@ -1,0 +1,10 @@
+.deleteBtn {
+  padding: 50px;
+  background-color: black;
+}
+
+.deleteBtn:hover {
+  background-color: #ff0000;
+  background-color: black;
+  padding: 50px;
+}

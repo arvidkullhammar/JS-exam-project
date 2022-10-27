@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 .button,
 .input,
@@ -16,7 +16,7 @@
 }
 
 .body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
   color: var(--primary);
   background-color: #f3f5f9;
@@ -53,7 +53,7 @@
   color: red;
 }
 .matchStatus:before {
-  content: "";
+  content: '';
   display: block;
   width: 6px;
   height: 6px;
@@ -112,6 +112,11 @@
   margin-top: 24px;
   font-size: 20px;
   font-weight: 600;
+}
+
+.teamName:hover {
+  color: var(--link-hover);
+  cursor: pointer;
 }
 
 .matchDetails {

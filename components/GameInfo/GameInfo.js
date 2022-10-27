@@ -1,13 +1,14 @@
 /** @format */
 
-import React from "react";
-import classes from "./GameInfo.module.css";
-import HeaderImg from "components/1.General/HeaderImg/HeaderImg";
-import Date from "components/1.General/Date/Date";
-import HomeBtn from "components/1.General/HomeBtn/HomeBtn";
+import React from 'react'
+import classes from './GameInfo.module.css'
+import HeaderImg from 'components/1.General/HeaderImg/HeaderImg'
+import Date from 'components/1.General/Date/Date'
+import HomeBtn from 'components/1.General/HomeBtn/HomeBtn'
+import Link from 'next/link'
 
 function GameInfo(props) {
-  console.log(props);
+  console.log(props)
   return (
     <div>
       <HomeBtn />
@@ -21,11 +22,21 @@ function GameInfo(props) {
           </div>
           <div className={classes.matchContent}>
             <div className={classes.column}>
-              <div className={`${classes.team} ${classes["team--home"]}`}>
+              <div className={`${classes.team} ${classes['team--home']}`}>
                 <div className={classes.teamLogo}>
                   <img src="https://assets.codepen.io/285131/whufc.svg" />
                 </div>
-                <h2 className={classes.teamName}>{props.teamOne.name}</h2>
+
+                <div>
+                  <Link
+                    href={{
+                      pathname: `/{cupnamn}/`,
+                    }}
+                    className={classes.textWrap}
+                  >
+                    <h2 className={classes.teamName}>{props.teamOne.name}</h2>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className={classes.column}>
@@ -45,18 +56,28 @@ function GameInfo(props) {
               </div>
             </div>
             <div className={classes.column}>
-              <div className={`${classes.team} ${classes["team--away"]}`}>
+              <div className={`${classes.team} ${classes['team--away']}`}>
                 <div className={classes.teamLogo}>
                   <img src="https://assets.codepen.io/285131/chelsea.svg" />
                 </div>
-                <h2 className={classes.teamName}>{props.teamTwo.name}</h2>
+
+                <div>
+                  <Link
+                    href={{
+                      pathname: `/{cupnamn}/`,
+                    }}
+                    className={classes.textWrap}
+                  >
+                    <h2 className={classes.teamName}>{props.teamTwo.name}</h2>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default GameInfo;
+export default GameInfo

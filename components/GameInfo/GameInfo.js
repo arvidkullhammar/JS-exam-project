@@ -8,6 +8,8 @@ import HomeBtn from 'components/1.General/HomeBtn/HomeBtn';
 import Link from 'next/link';
 import useLogo from 'hooks/useLogo';
 import Image from 'next/future/image';
+import loven from "public/images/mocklogos/klubb_loven.png";
+import modo from "public/images/mocklogos/mini_modo.png";
 
 function GameInfo(props) {
   console.log(props.teamTwo.id);
@@ -27,7 +29,7 @@ function GameInfo(props) {
             <div className={classes.column}>
               <div className={`${classes.team} ${classes['team--home']}`}>
                 <div className={classes.teamLogo}>
-                  {logo && <Image src={logo} alt="Team logo" height="10px" width="10px" />}
+                  {logo && <Image src={loven} alt="Team logo" height="10px" width="10px" />}
                 </div>
 
                 <div>
@@ -65,7 +67,7 @@ function GameInfo(props) {
             <div className={classes.column}>
               <div className={`${classes.team} ${classes['team--away']}`}>
                 <div className={classes.teamLogo}>
-                  {logo && <Image src={logo} alt="Team logo" height="10px" width="10px" />}
+                  {logo && <Image src={modo} alt="Team logo" height="10px" width="10px" />}
                 </div>
 
                 <div>

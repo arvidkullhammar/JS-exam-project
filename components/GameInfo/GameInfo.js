@@ -64,7 +64,7 @@ function GameInfo(props) {
                 <div>
                   <Link
                     href={{
-                      pathname: `/{cupnamn}/`,
+                      pathname: `/{cupnamn}/laginfo/{teamTwo.name}`,
                     }}
                     className={classes.textWrap}
                   >

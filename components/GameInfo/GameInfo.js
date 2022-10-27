@@ -8,8 +8,8 @@ import HomeBtn from 'components/1.General/HomeBtn/HomeBtn';
 import Link from 'next/link';
 import useLogo from 'hooks/useLogo';
 import Image from 'next/future/image';
-import loven from "public/images/mocklogos/klubb_loven.png";
-import modo from "public/images/mocklogos/mini_modo.png";
+import loven from 'public/images/mocklogos/klubb_loven.png';
+import modo from 'public/images/mocklogos/mini_modo.png';
 
 function GameInfo(props) {
   console.log(props.teamTwo.id);
@@ -46,9 +46,7 @@ function GameInfo(props) {
             </div>
             <div className={classes.column}>
               <div className={classes.matchDetails}>
-                <div className={classes.matchDate}>
-                  28 Nov at <strong>16:00</strong>
-                </div>
+                <div className={classes.matchDate}>28 Nov</div>
                 <div className={classes.matchScore}>
                   <span className={`${classes.matchScoreNumber} `}>13</span>
                   <span className={classes.matchScoreDivider}>:</span>
@@ -58,7 +56,7 @@ function GameInfo(props) {
                     37
                   </span>
                 </div>
-                <div className={classes.matchTimeLapsed}>92'</div>
+
                 <div className={classes.matchReferee}>
                   Domare: <strong>Anders Borg</strong>
                 </div>

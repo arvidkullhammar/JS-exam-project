@@ -6,12 +6,13 @@ import classes from './Addplayer.module.css';
 export default function Addplayer(props) {
   const { team, parentStateCallback } = props;
   const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [number, setNumber] = useState(0);
 
   const addPlayer = async () => {
+
     const newObj = {
       name: name,
-      number: Number(number),
+      number: Number(number) + 1,
       team: Number(team),
     };
     await fetch('http://localhost:3000/api/players/add', {
@@ -44,8 +45,8 @@ export default function Addplayer(props) {
         onChange={(e) => setNumber(e.target.value)}
       >
         {[...Array(99)].map((x, i) => (
-          <option key={i + 1} value={i + 1}>
-            Tröjnummer: {i + 1}
+          <option key={i + 1} value={i}>
+           Tröjnummer {i + 1}
           </option>
         ))}
       </select>

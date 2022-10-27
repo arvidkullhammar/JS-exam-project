@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState } from 'react'
-import classes from '../Addplayer/Addplayer.module.css'
+import classes from './Deleteplayer.module.css'
 
 export default function DeletePlayer(props) {
   const { id, parentStateCallback } = props
@@ -19,9 +19,7 @@ export default function DeletePlayer(props) {
 
   return (
     <div className={classes.deleteBtn}>
-      <div className={classes.deleteBtnText} onClick={(id) => deletePlayer()}>
-        Ta bort
-      </div>
+      <div onClick={(id) => deletePlayer()}>X</div>
     </div>
   )
 }

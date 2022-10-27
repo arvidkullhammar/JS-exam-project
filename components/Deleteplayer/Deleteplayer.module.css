@@ -1,10 +1,18 @@
 .deleteBtn {
-  padding: 50px;
-  background-color: black;
+  padding: 10px;
+  background: var(--backgroundWhite);
+  color: var(--primary);
+  border-radius: 0px 6px 6px 0px;
+  transition: 0.2s linear;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .deleteBtn:hover {
-  background-color: #ff0000;
-  background-color: black;
-  padding: 50px;
+  background-color: var(--delete-hover);
+  color: var(--secondary);
+  transition: 0.2s linear;
+  cursor: pointer;
 }

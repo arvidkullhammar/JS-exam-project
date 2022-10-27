@@ -7,12 +7,12 @@ export default async function handler(req, res) {
     return;
   } else {
     try {
-      const body = JSON.parse(req.body);
+      const playerObj = JSON.parse(req.body);
       const newPlayer = await prisma.players.create({
         data: {
-          name: body.name,
-          number: body.number,
-          teamId: body.team,
+          name: playerObj.name,
+          number: playerObj.number,
+          teamId: playerObj.team,
         },
       });
       res.status(201).send("Player added!");

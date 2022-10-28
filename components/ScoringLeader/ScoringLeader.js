@@ -13,31 +13,31 @@ function ScoringLeader() {
         </thead>
         <tbody>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>Krösus Sork</td>
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>Bruce Wayne</td>
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>Jan Emanuel</td>
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>Lex Luthor</td>
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>Elon Musk</td>
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>Dan Bilzerian</td>
             <td>0</td>
           </tr>
           <tr>
-            <td className={classes.textLeft}>0</td>
+            <td className={classes.textLeft}>Tony Stark</td>
             <td>0</td>
           </tr>
         </tbody>

@@ -4,16 +4,16 @@ import Link from 'next/link'
 
 const HomeBtn = () => {
   return (
-    <div className={classes.btnStyling}>
-      <Link
-        href={{
-          pathname: `/{cupnamn}/`,
-        }}
-        className={classes.textWrap}
-      >
+    <Link
+      href={{
+        pathname: `/{cupnamn}/`,
+      }}
+      className={classes.textWrap}
+    >
+      <div className={classes.btnStyling}>
         <span>Tillbaka</span>
-      </Link>
-    </div>
+      </div>
+    </Link>
   )
 }
 export default HomeBtn

@@ -9,6 +9,9 @@ Grassroots provides youth-sport tournament organisers with a tool for the partic
 Description of users
 The primary users of the Grassroots app is youth-tournament participants and their families as well as tournament organisers.
 
+Link to vercel: https://grass-root.vercel.app/ 
+(The "teaminfo page" does not currently work on vercel. Feel free to contact me if you want the DATABASE_URL password for testing locally.)
+
 ## Problem description
 The tools available for grassroot sports have not evolved much along this digitalization era. Information about the tournament is usually lacking, hard to find and static. In the best cases, there is a static website with information, but a lot of tournaments are still administrated with analogue tools, such as game protocols on paper and notice boards next to the reception area.
 We see big opportunities to make it easier for tournament organisers and participants by digitalizing many of these tools using the latest tools in web-app development.

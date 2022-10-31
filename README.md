@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Examsproject Javascript HT2022
 
-## Getting Started
+Frontend developer & UX/UI: Sebastian Olson, Sebastian Svensson
 
-First, run the development server:
+Backend developer: Arvid Kullhammar
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Description of project
+Grassroots provides youth-sport tournament organisers with a tool for the participants and their families to easily keep track of information such as information about other teams, tournament schedule and what locker-room to use.
+Description of users
+The primary users of the Grassroots app is youth-tournament participants and their families as well as tournament organisers.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Problem description
+The tools available for grassroot sports have not evolved much along this digitalization era. Information about the tournament is usually lacking, hard to find and static. In the best cases, there is a static website with information, but a lot of tournaments are still administrated with analogue tools, such as game protocols on paper and notice boards next to the reception area.
+We see big opportunities to make it easier for tournament organisers and participants by digitalizing many of these tools using the latest tools in web-app development.
+Techniques used
+Languages: HTML, CSS, Javascript
+Library: React
+Framework: Next.js
+Backend: Next.js API routes, Prisma and Supabase
+Methodology
+We used Trello to organise and keep track of the development process.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Version 2.0
+Add multiple user roles
+Add schedule editing tools
+Add CRUD tools for teams
+Add filtering options on the main page
+Add Win/loose tracking
+Add league-page data flow

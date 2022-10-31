@@ -1,5 +1,5 @@
 Examsproject Javascript HT2022
-UX/UI and Project Manager: Sebastian Olson
+Frontend developer & UX/UI: Sebastian Olson
 Frontend developer: Sebastian Svensson
 Backend developer: Arvid Kullhammar
 
@@ -19,11 +19,10 @@ Backend: Next.js API routes, Prisma and Supabase
 Methodology
 We used Trello to organise and keep track of the development process.
 
-
 Version 2.0
-	Add multiple user roles
-	Add schedule editing tools
-	Add CRUD tools for teams
-	Add filtering options on the main page
-	Add Win/loose tracking
-	Add league-page data flow
+ Add multiple user roles
+ Add schedule editing tools
+ Add CRUD tools for teams
+ Add filtering options on the main page
+ Add Win/loose tracking
+ Add league-page data flow

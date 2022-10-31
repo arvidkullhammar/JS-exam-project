@@ -1,4 +1,4 @@
-##Examsproject Javascript HT2022
+## Examsproject Javascript HT2022
 
 Frontend developer & UX/UI: Sebastian Olson
 
@@ -23,7 +23,7 @@ Methodology
 We used Trello to organise and keep track of the development process.
 
 ## Version 2.0
- Add multiple user roles
+Add multiple user roles
  Add schedule editing tools
  Add CRUD tools for teams
  Add filtering options on the main page

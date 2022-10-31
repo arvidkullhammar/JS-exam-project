@@ -22,8 +22,13 @@ We used Trello to organise and keep track of the development process.
 
 ## Version 2.0
 Add multiple user roles
+
 Add schedule editing tools
+
 Add CRUD tools for teams
+
 Add filtering options on the main page
+
 Add Win/loose tracking
+
 Add league-page data flow
